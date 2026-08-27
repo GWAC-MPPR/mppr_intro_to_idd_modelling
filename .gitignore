@@ -16,3 +16,6 @@
 /slides.html
 /index.html
 /_0*.html
+
+# Slides PDF is published as a GitHub Release asset, not tracked
+slides.pdf
