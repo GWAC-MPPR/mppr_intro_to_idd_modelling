@@ -4,3 +4,18 @@
 .Ruserdata
 
 /.quarto/
+
+**/*.quarto_ipynb
+
+# macOS
+.DS_Store
+
+# Quarto rendered output (CI renders slides.qmd and publishes to gh-pages)
+/_freeze/
+/*_files/
+/slides.html
+/index.html
+/_0*.html
+
+# Slides PDF is published as a GitHub Release asset, not tracked
+slides.pdf
