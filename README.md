@@ -4,10 +4,16 @@ Introduction to Infectious Disease Dynamics Modelling
 <!-- badges: start -->
 <!-- badges: end -->
 
-This repository contains the materials for the “Introduction to Infectious Disease Dynamics Modelling” part of the online session of the "Modelling for Pandemic Preparedness and Response (MPPR)" modular short course run by the German West African Centre for Global Health and Pandemic Prevention (G-WAC) at the Kwame Nkrumah University of Science and Technology. Access the slides [here](https://gwac-mppr.github.io/mppr_intro_to_idd_modelling/#/title-slide). All assignments and materials referred to in the slides can be found in this repository. In particular, the rendered pdf of the slides are [here](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling/releases/latest/download/slides.pdf) and the R practicals are [here](https://github.com/GWAC-MPPR/mppr_r_practicals).
+This repository contains materials for the “Introduction to Infectious Disease Dynamics Modelling” part of the [Modelling for Pandemic Preparedness and Response (MPPR) modular short course](https://vclass.g-wac.org/local/gwac_landing/index.php?track=mppr&page=overview) run by the German West African Centre for Global Health and Pandemic Prevention (G-WAC) at the Kwame Nkrumah University of Science and Technology. 
 
-The MPPR course was divided into two parts: one week online and one week in person in Ghana. It is designed to provide an introduction to infectious disease dynamics modelling using R and is aimed at individuals in public health, epidemiology, and related disciplines. It is interactive and hands-on and focuses on practical applications of infectious disease dynamics modelling to pandemic response.
+The MPPR course is designed to provide an introduction to infectious disease dynamics modelling, health economics modelling, and science communication. It targets individuals with a quantitative background as well as professionals in public health, epidemiology, and related disciplines. It is interactive and hands-on and focuses on practical applications of infectious disease dynamics modelling to pandemic response.
 
-The materials here were prepared and taught by [Dr. James Azam](https://jamesmbaazam.github.io/jamesmbaazam/). 
+See the course's 2026 schedule [here](https://vclass.g-wac.org/local/gwac_landing/index.php?track=mppr&page=overview#schedule)
 
-For materials from the in-person part, see [here](https://gwac-mppr.github.io/mppr_website/).
+## Resources in this repository
+
+* [Web-based slides](https://gwac-mppr.github.io/mppr_intro_to_idd_modelling/#/title-slide) and [pdf version](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling/releases/latest/download/slides.pdf)
+
+* [R practicals](https://github.com/GWAC-MPPR/mppr_r_practicals)
+
+The materials here were prepared and taught by [Dr. James Mba Azam](https://jamesmbaazam.github.io/jamesmbaazam/)
