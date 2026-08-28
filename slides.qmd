@@ -24,12 +24,6 @@ format:
     chalkboard: true
     toc: true
     toc-depth: 1
-  beamer:
-    navigation: horizontal
-    theme: metropolis
-    institute: London School of Hygiene and Tropical Medicine, UK
-    orcid: 0000-0001-5782-7330
-    email: james.azam@lshtm.ac.uk
 transition: fade
 lightbox: true
 progress: true

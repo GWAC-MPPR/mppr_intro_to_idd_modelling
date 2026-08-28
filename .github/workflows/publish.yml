@@ -44,25 +44,27 @@ jobs:
           tinytex::tlmgr_install(c("beamertheme-metropolis", "pgfopts"))
         shell: Rscript {0}
 
-      # Render each format explicitly. slides.qmd declares both revealjs and
-      # beamer, so a bare `quarto render` would produce both and leave the
-      # publish step guessing which one to deploy.
-      - name: Render slides to revealjs
+      # On main the publish step below does its own render. Off main nothing
+      # publishes, so render here purely to prove the deck still builds.
+      - name: Render slides to revealjs (build check)
+        if: github.ref != 'refs/heads/main'
         run: quarto render slides.qmd --to revealjs
 
-      - name: Render slides to PDF
-        run: quarto render slides.qmd --to beamer
-
-      # Everything below is outward-facing, so it only runs on main. This is
-      # what makes the workflow safe to dispatch from a feature branch: the
-      # render steps above still prove the build.
+      # Publishing is outward-facing, so it only runs on main. Let the action
+      # render rather than passing render: false — with --no-render quarto
+      # skips resource discovery and images/ never reaches gh-pages.
       - name: Publish slides to gh-pages
         if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
           path: slides.qmd
-          render: false
+
+      # Deliberately after the publish step: slides.pdf must not exist in the
+      # working tree while quarto publish is copying output to gh-pages, or a
+      # 25MB PDF gets committed to that branch on every build.
+      - name: Render slides to PDF
+        run: quarto render slides.qmd --profile pdf --to beamer
 
       # The README links to releases/latest/download/slides.pdf, so refreshing
       # the asset on this release keeps that link current.
