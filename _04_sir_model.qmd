@@ -387,8 +387,8 @@ $$
 
 #### Practicals
 
--   Let's do a code walk through in R using the script [`sir.qmd`](https://github.com/GWAC-MPPR/intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
-    - Link: https://github.com/GWAC-MPPR/intro_to_idd_modelling_r_practicals/
+-   Let's do a code walk through in R using the script [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
+    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 
