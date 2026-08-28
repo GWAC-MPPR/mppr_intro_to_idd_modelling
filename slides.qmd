@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Infectious Disease Modelling"
-subtitle: "Modelling for Pandemic Preparedness and Response Modular Shortcourse, 2025"
+subtitle: "Modelling for Pandemic Preparedness and Response Modular Shortcourse, 2026"
 author:
   - name: "James Mba Azam, PhD"
     orcid: 0000-0001-5782-7330
@@ -8,21 +8,14 @@ author:
     affiliation: 
       - name: London School of Hygiene and Tropical Medicine, UK
         city: London, United Kingdom
-date: "last-modified"
+date: "2026-09-10"
 license: "CC BY"
 copyright: 
   holder: James Mba Azam
-  year: 2025
+  year: 2026
 execute:
   echo: true
   freeze: auto
-# format:
-#   beamer:
-#     navigation: horizontal
-#     theme: metropolis
-#     institute: London School of Hygiene and Tropical Medicine, UK
-#     orcid: 0000-0001-5782-7330
-#     email: james.azam@lshtm.ac.uk
 format:
   revealjs:
     theme: [solarized]
@@ -31,12 +24,16 @@ format:
     chalkboard: true
     toc: true
     toc-depth: 1
+  beamer:
+    navigation: horizontal
+    theme: metropolis
+    institute: London School of Hygiene and Tropical Medicine, UK
+    orcid: 0000-0001-5782-7330
+    email: james.azam@lshtm.ac.uk
 transition: fade
 lightbox: true
 progress: true
 code-copy: true
-# revealjs-plugins:
-#   - revealjs-text-resizer
 bibliography: references.bib
 link-citations: true
 engine: knitr

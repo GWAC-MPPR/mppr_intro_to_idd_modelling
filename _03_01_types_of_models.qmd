@@ -397,7 +397,7 @@ $$\frac{dS}{dt} = -\beta S I$$
 :::
 
 ::: {.column width="40%"}
-![Examples of network models. Source: [Danon et al., 2010](10.1155/2011/284909)](images/network_models.png)
+![Examples of network models. Source: [Danon et al., 2010](https://doi.org/10.1155/2011/284909)](images/network_models.png)
 :::
 :::::
 
@@ -468,7 +468,7 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ### The modelling for decision-making process
 
-![The modelling process involves balancing realism, tractability, and generality. Source: [Heesterbeek et al, 2015](10.1126/science.aaa4339)](images/modelling_process.png){width=70%}
+![The modelling process involves balancing realism, tractability, and generality. Source: [Heesterbeek et al, 2015](https://doi.org/10.1126/science.aaa4339)](images/modelling_process.png){width=70%}
 
 ------------------------------------------------------------------------
 

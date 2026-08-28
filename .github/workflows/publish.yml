@@ -19,25 +19,55 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.4.515
+          version: 1.9.37
+          tinytex: true
 
       - name: Install R
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
 
+      # slides.qmd declares engine: knitr, so R is required even though no
+      # slide currently contains a live code chunk.
       - name: Install dependencies
         run: |
-          install.packages(c("rmarkdown", "knitr"))
+          install.packages(c("rmarkdown", "knitr", "tinytex"))
         shell: Rscript {0}
 
-      # Install TinyTeX for PDF rendering
-      - name: Install TinyTeX
+      # The beamer theme is not part of the TinyTeX base install, and the
+      # mtheme submodule that used to vendor it was removed in 133c0c8.
+      # Driven through the tinytex R package rather than calling tlmgr
+      # directly: the setup action only puts tlmgr on PATH for macOS and
+      # Windows, while on Linux Quarto installs TinyTeX to ~/.TinyTeX.
+      - name: Install LaTeX packages for the beamer theme
         run: |
-          quarto install tinytex
+          tinytex::tlmgr_install(c("beamertheme-metropolis", "pgfopts"))
+        shell: Rscript {0}
 
-      - name: Render and Publish
+      # Render each format explicitly. slides.qmd declares both revealjs and
+      # beamer, so a bare `quarto render` would produce both and leave the
+      # publish step guessing which one to deploy.
+      - name: Render slides to revealjs
+        run: quarto render slides.qmd --to revealjs
+
+      - name: Render slides to PDF
+        run: quarto render slides.qmd --to beamer
+
+      # Everything below is outward-facing, so it only runs on main. This is
+      # what makes the workflow safe to dispatch from a feature branch: the
+      # render steps above still prove the build.
+      - name: Publish slides to gh-pages
+        if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
           path: slides.qmd
+          render: false
+
+      # The README links to releases/latest/download/slides.pdf, so refreshing
+      # the asset on this release keeps that link current.
+      - name: Attach PDF to the slides release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload slides-2026 slides.pdf --clobber
