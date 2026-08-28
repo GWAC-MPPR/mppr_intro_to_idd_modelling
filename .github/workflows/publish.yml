@@ -31,13 +31,18 @@ jobs:
       # slide currently contains a live code chunk.
       - name: Install dependencies
         run: |
-          install.packages(c("rmarkdown", "knitr"))
+          install.packages(c("rmarkdown", "knitr", "tinytex"))
         shell: Rscript {0}
 
       # The beamer theme is not part of the TinyTeX base install, and the
       # mtheme submodule that used to vendor it was removed in 133c0c8.
+      # Driven through the tinytex R package rather than calling tlmgr
+      # directly: the setup action only puts tlmgr on PATH for macOS and
+      # Windows, while on Linux Quarto installs TinyTeX to ~/.TinyTeX.
       - name: Install LaTeX packages for the beamer theme
-        run: tlmgr install beamertheme-metropolis pgfopts
+        run: |
+          tinytex::tlmgr_install(c("beamertheme-metropolis", "pgfopts"))
+        shell: Rscript {0}
 
       # Render each format explicitly. slides.qmd declares both revealjs and
       # beamer, so a bare `quarto render` would produce both and leave the
