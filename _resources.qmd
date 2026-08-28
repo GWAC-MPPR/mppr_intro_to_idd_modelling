@@ -62,7 +62,7 @@
 
 ### Deriving and Interpreting R0 {.smaller}
 
-- Jones, J. H. (2011). Notes On R0. Building, 1–19. <https://web.stanford.edu/\~jhj1/teachingdocs/Jones-on-R0.pdf>
+- Jones, J. H. (2011). Notes On R0. Building, 1–19. <https://web.stanford.edu/~jhj1/teachingdocs/Jones-on-R0.pdf>
 
 - Diekmann, O., Heesterbeek, J. A. P., & Metz, J. A. J. (1990). On the definition and the computation of the basic reproduction ratio R0 in models for infectious diseases in heterogeneous populations. Journal of Mathematical Biology, 28(4), 365–382. <https://doi.org/10.1007/BF00178324>
 
