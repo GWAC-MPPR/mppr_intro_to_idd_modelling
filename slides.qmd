@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Infectious Disease Modelling"
-subtitle: "Modelling for Pandemic Preparedness and Response Modular Shortcourse, 2025"
+subtitle: "Modelling for Pandemic Preparedness and Response Modular Shortcourse, 2026"
 author:
   - name: "James Mba Azam, PhD"
     orcid: 0000-0001-5782-7330
@@ -12,7 +12,7 @@ date: "2026-09-10"
 license: "CC BY"
 copyright: 
   holder: James Mba Azam
-  year: 2025
+  year: 2026
 execute:
   echo: true
   freeze: auto
@@ -34,7 +34,6 @@ transition: fade
 lightbox: true
 progress: true
 code-copy: true
-# revealjs-plugins:
 bibliography: references.bib
 link-citations: true
 engine: knitr
