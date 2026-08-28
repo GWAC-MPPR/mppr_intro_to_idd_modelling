@@ -31,17 +31,7 @@ jobs:
       # slide currently contains a live code chunk.
       - name: Install dependencies
         run: |
-          install.packages(c("rmarkdown", "knitr", "tinytex"))
-        shell: Rscript {0}
-
-      # The beamer theme is not part of the TinyTeX base install, and the
-      # mtheme submodule that used to vendor it was removed in 133c0c8.
-      # Driven through the tinytex R package rather than calling tlmgr
-      # directly: the setup action only puts tlmgr on PATH for macOS and
-      # Windows, while on Linux Quarto installs TinyTeX to ~/.TinyTeX.
-      - name: Install LaTeX packages for the beamer theme
-        run: |
-          tinytex::tlmgr_install(c("beamertheme-metropolis", "pgfopts"))
+          install.packages(c("rmarkdown", "knitr"))
         shell: Rscript {0}
 
       # On main the publish step below does its own render. Off main nothing
@@ -63,6 +53,12 @@ jobs:
       # Deliberately after the publish step: slides.pdf must not exist in the
       # working tree while quarto publish is copying output to gh-pages, or a
       # 25MB PDF gets committed to that branch on every build.
+      #
+      # beamertheme-metropolis is installed by Quarto on demand during this
+      # render. Do not add an explicit `tlmgr install` step: its `update
+      # --self` moves TinyTeX ahead of whichever CTAN mirror tlmgr picks, and
+      # the mirror then refuses every subsequent install, breaking Quarto's
+      # auto-install too.
       - name: Render slides to PDF
         run: quarto render slides.qmd --profile pdf --to beamer
 
