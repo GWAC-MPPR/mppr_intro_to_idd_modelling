@@ -18,27 +18,27 @@ For a background on vaccination, refer to @sec-vaccination.
 :::
 
 ::: {.column width="60%"}
--   Vaccination is one of the most effective ways to control infectious diseases.
--   Conceptually, vaccination works to reduce the number of susceptible individuals, $S$.
+- Vaccination is one of the most effective ways to control infectious diseases.
+- Conceptually, vaccination works to reduce the number of susceptible individuals, $S$.
 :::
 :::::
 
 ------------------------------------------------------------------------
 
--   There are different types of vaccination strategies, including:
+- There are different types of vaccination strategies, including:
 
-    -   [pediatric]{style="color:tomato"} vaccination: vaccinating children to prevent the spread of diseases.
-    -   [mass/random]{style="color:tomato"} vaccination: vaccinating a large proportion of the population.
-    -   [targeted]{style="color:tomato"} vaccination: vaccinating specific groups of individuals, example, healthcare workers.
-    -   [pulse]{style="color:tomato"} vaccination: periodically vaccinating a large number of individuals.
+  - [pediatric]{style="color:tomato"} vaccination: vaccinating children to prevent the spread of diseases.
+  - [mass/random]{style="color:tomato"} vaccination: vaccinating a large proportion of the population.
+  - [targeted]{style="color:tomato"} vaccination: vaccinating specific groups of individuals, example, healthcare workers.
+  - [pulse]{style="color:tomato"} vaccination: periodically vaccinating a large number of individuals.
 
 ------------------------------------------------------------------------
 
--   Let's consider the case of mass/random vaccination.
+- Let's consider the case of mass/random vaccination.
 
--   Compartmental models can be extended to capture this by adding a new compartment, $V$.
+- Compartmental models can be extended to capture this by adding a new compartment, $V$.
 
--   Let's consider the SEIR model with vaccination.
+- Let's consider the SEIR model with vaccination.
 
 ------------------------------------------------------------------------
 
@@ -54,18 +54,18 @@ For a background on vaccination, refer to @sec-vaccination.
 :::
 
 ::: {.column width="60%"}
--   The SEIRV model is simply the SEIR model with a vaccinated compartment, $V$.
--   The vaccinated compartment represents previously susceptible individuals who have been vaccinated and are immune to the disease.
+- The SEIRV model is simply the SEIR model with a vaccinated compartment, $V$.
+- The vaccinated compartment represents previously susceptible individuals who have been vaccinated and are immune to the disease.
 :::
 :::::
 
 ------------------------------------------------------------------------
 
--   The vaccinated compartment is:
+- The vaccinated compartment is:
 
-    -   not infectious and does not move to the exposed or infectious compartments.
+  - not infectious and does not move to the exposed or infectious compartments.
 
-    -   replenished by the rate of vaccination, $\eta$.
+  - replenished by the rate of vaccination, $\eta$.
 
 ------------------------------------------------------------------------
 
@@ -94,9 +94,9 @@ where $\eta$ is the rate of vaccination.
 ::: {.callout-caution collapse="true" icon="false"}
 #### Discussion
 
--   What are some of the assumptions of the SEIRV model?
+- What are some of the assumptions of the SEIRV model?
 
--   What are the implications of these assumptions for the model's predictions?
+- What are the implications of these assumptions for the model's predictions?
 :::
 
 ------------------------------------------------------------------------
@@ -105,10 +105,10 @@ where $\eta$ is the rate of vaccination.
 
 #### R Practicals
 
--   We can use the same approach as the SIR and SEIR models to simulate the SEIRV model.
+- We can use the same approach as the SIR and SEIR models to simulate the SEIRV model.
 
--   Modify the `seir_bd.qmd` script to simulate the SEIRV model.
-    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Modify the `seir_bd.qmd` script to simulate the SEIRV model.
+  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 
@@ -120,26 +120,26 @@ For a background on non-pharmaceutical interventions, refer to @sec-npi.
 
 ------------------------------------------------------------------------
 
--   Conceptually, NPIs usually act to either reduce the transmission rate, $\beta$ or prevent infected individuals from transmitting.
+- Conceptually, NPIs usually act to either reduce the transmission rate, $\beta$ or prevent infected individuals from transmitting.
 
--   NPIs like isolation, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by reducing the contact rate between susceptible and infectious individuals.
+- NPIs like isolation, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by reducing the contact rate between susceptible and infectious individuals.
 
--   Hygiene measures reduce the probability of transmission per contact, thereby reducing the transmission rate, $\beta$, since $\beta = c \times p$.
+- Hygiene measures reduce the probability of transmission per contact, thereby reducing the transmission rate, $\beta$, since $\beta = c \times p$.
 
 ------------------------------------------------------------------------
 
--   Let's consider two scenarios that will extend the SIR model to include NPIs:
+- Let's consider two scenarios that will extend the SIR model to include NPIs:
 
-    1.  Modifying the transmission rate, $\beta$.
-    2.  Preventing infected individuals from transmitting through isolation.
+  1.  Modifying the transmission rate, $\beta$.
+  2.  Preventing infected individuals from transmitting through isolation.
 
 ------------------------------------------------------------------------
 
 ### Modifying the transmission rate
 
--   NPIs such as social distancing, mask-wearing, and hand hygiene can reduce the transmission rate, $\beta$.
+- NPIs such as social distancing, mask-wearing, and hand hygiene can reduce the transmission rate, $\beta$.
 
--   We can model this by making the transmission rate a function of time, $\beta (t)$.
+- We can model this by making the transmission rate a function of time, $\beta (t)$.
 
 ------------------------------------------------------------------------
 
@@ -153,11 +153,11 @@ The modified SIR model with a reduced transmission rate is as follows:
 
 ------------------------------------------------------------------------
 
--   The simplest form is to reduce $\beta$ by an NPI efficacy, say $\epsilon$.
+- The simplest form is to reduce $\beta$ by an NPI efficacy, say $\epsilon$.
 
--   Assuming the NPI is implemented between $t_{\text{npi\_start}}$ and $t_{\text{npi\_end}}$, it means that $\beta$ remains the same before that period and is modified to $(1- \epsilon)\beta$ during the period of the NPI, where $0 \leq \epsilon \leq 1$.
+- Assuming the NPI is implemented between $t_{\text{npi\_start}}$ and $t_{\text{npi\_end}}$, it means that $\beta$ remains the same before that period and is modified to $(1- \epsilon)\beta$ during the period of the NPI, where $0 \leq \epsilon \leq 1$.
 
--   With this knowledge, we can define $\beta (t)$ mathematically as:
+- With this knowledge, we can define $\beta (t)$ mathematically as:
 
 \begin{equation*}
 \beta(t) = \begin{cases}
@@ -170,32 +170,32 @@ The modified SIR model with a reduced transmission rate is as follows:
 
 #### R Practicals
 
--   Let's open the script file `sir_npi.qmd` and follow along.
-    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Let's open the script file `sir_npi.qmd` and follow along.
+  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 
 ### NPIs as compartments
 
--   In the previous example, we retained the SIR model structure and modified the transmission rate.
+- In the previous example, we retained the SIR model structure and modified the transmission rate.
 
--   We can also model NPIs as compartments in the model. This is useful when we want to treat individuals affected by the NPIs differently.
-
-------------------------------------------------------------------------
-
--   For example, isolation is an NPI that prevents infected individuals from transmitting the disease.
-
--   This means that infected individuals in isolation do not contribute to the transmission of the disease and need to be removed from the infected compartment.
-
--   Moving isolated individuals to a separate compartment allows us to track them separately in the model and apply relevant parameters.
+- We can also model NPIs as compartments in the model. This is useful when we want to treat individuals affected by the NPIs differently.
 
 ------------------------------------------------------------------------
 
--   We can model this by introducing a new compartment, $Q$, for isolating infected individuals.
+- For example, isolation is an NPI that prevents infected individuals from transmitting the disease.
 
--   Let's assume, infected individuals move to the isolated compartment at a rate, $\delta$.
+- This means that infected individuals in isolation do not contribute to the transmission of the disease and need to be removed from the infected compartment.
 
--   Infected individuals in the isolated compartment do not transmit the disease.
+- Moving isolated individuals to a separate compartment allows us to track them separately in the model and apply relevant parameters.
+
+------------------------------------------------------------------------
+
+- We can model this by introducing a new compartment, $Q$, for isolating infected individuals.
+
+- Let's assume, infected individuals move to the isolated compartment at a rate, $\delta$.
+
+- Infected individuals in the isolated compartment do not transmit the disease.
 
 ------------------------------------------------------------------------
 
@@ -214,9 +214,9 @@ where $\delta$ is the rate at which infected individuals move to the isolated co
 
 ##### R Practicals
 
--   We can use the same approach as the SIR model to simulate the model with isolation.
--   Modify the SIR model in [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals) to incorporate the isolated compartment, $Q$ and the relevant parameters.
-    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- We can use the same approach as the SIR model to simulate the model with isolation.
+- Modify the SIR model in [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals) to incorporate the isolated compartment, $Q$ and the relevant parameters.
+  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 

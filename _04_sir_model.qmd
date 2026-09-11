@@ -2,11 +2,11 @@
 
 This model groups individuals into three *disease states*:
 
--   [Susceptible (S)]{style="color:green;"}: not infected but can be.
+- [Susceptible (S)]{style="color:green;"}: not infected but can be.
 
--   [Infected (I)]{style="color:tomato;"}: infected & infectious.
+- [Infected (I)]{style="color:tomato;"}: infected & infectious.
 
--   [Recovered/removed (R)]{style="color:blue;"}: recovered & immune.
+- [Recovered/removed (R)]{style="color:blue;"}: recovered & immune.
 
 ------------------------------------------------------------------------
 
@@ -20,10 +20,10 @@ This model groups individuals into three *disease states*:
 
 ------------------------------------------------------------------------
 
--   Transmission is driven by several factors, including:
-    -   Disease prevalence, [$I$]{style="color:blue;"}, i.e., number of infected individuals at the time.
-    -   The number of contacts, [$C$]{style="color:blue;"}, susceptible individuals have with infected individual.
-    -   The probability, [$p$]{style="color:blue;"}, a susceptible individual will become infected when they contact an infected individual.
+- Transmission is driven by several factors, including:
+  - Disease prevalence, [$I$]{style="color:blue;"}, i.e., number of infected individuals at the time.
+  - The number of contacts, [$C$]{style="color:blue;"}, susceptible individuals have with infected individual.
+  - The probability, [$p$]{style="color:blue;"}, a susceptible individual will become infected when they contact an infected individual.
 
 ------------------------------------------------------------------------
 
@@ -35,26 +35,26 @@ The transmission term is often defined through the [force of infection (FOI), $\
 
 ### A tour of the force of infection (FOI)
 
--   FOI, $\lambda$, is the [per capita rate]{style="color:tomato;"} at which susceptible individuals become infected.
+- FOI, $\lambda$, is the [per capita rate]{style="color:tomato;"} at which susceptible individuals become infected.
 
 ::: {.callout-note collapse="true" icon="false"}
 "Per capita" means the rate of an event occurring per individual in the population per unit of time.
 :::
 
--   Given the rate per individual per time, FOI, the rate at which new infecteds are generated is given by [$\lambda \times S$]{style="color:blue;"}, where $S$ is the number of susceptible individuals.
+- Given the rate per individual per time, FOI, the rate at which new infecteds are generated is given by [$\lambda \times S$]{style="color:blue;"}, where $S$ is the number of susceptible individuals.
 
 ------------------------------------------------------------------------
 
--   The force of infection is made up of the probabilities/rates that:
-    -   contacts happen, [$c$]{style="color:blue"},
-    -   a given contact is with an infected individual, [$p$]{style="color:blue"}, and
-    -   a contact results in successful transmission, [$v$]{style="color:blue"}.
+- The force of infection is made up of the probabilities/rates that:
+  - contacts happen, [$c$]{style="color:blue"},
+  - a given contact is with an infected individual, [$p$]{style="color:blue"}, and
+  - a contact results in successful transmission, [$v$]{style="color:blue"}.
 
 ------------------------------------------------------------------------
 
--   The FOI can be formulated in two ways, depending on how the contact rate is expected to change with the population size:
-    -   Frequency-dependent/mass action transmission
-    -   Density-dependent transmission
+- The FOI can be formulated in two ways, depending on how the contact rate is expected to change with the population size:
+  - Frequency-dependent/mass action transmission
+  - Density-dependent transmission
 
 ------------------------------------------------------------------------
 
@@ -64,9 +64,9 @@ The rate of contact between individuals is constant irrespective of the populati
 
 ------------------------------------------------------------------------
 
--   Recall that transmission also depends on the probability of contact with an infected host, [$p$]{style="color:blue"}, which is assumed to be [$\dfrac{I}{N}$]{style="color:blue"}.
+- Recall that transmission also depends on the probability of contact with an infected host, [$p$]{style="color:blue"}, which is assumed to be [$\dfrac{I}{N}$]{style="color:blue"}.
 
--   Hence, the frequency-dependent mass action is given by [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta$]{style="color:blue"} is the transmission rate.
+- Hence, the frequency-dependent mass action is given by [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta$]{style="color:blue"} is the transmission rate.
 
 ------------------------------------------------------------------------
 
@@ -78,48 +78,48 @@ Why does the frequency-dependent transmission contain [$\dfrac{1}{N}$]{style="co
 
 ------------------------------------------------------------------------
 
--   Assume that the rate of new infections is given by [$\dfrac{dI}{dt} = S \times c \times p \times v$]{style="color:blue"} where [$S$]{style="color:blue"} is the number of susceptible hosts, [$c$]{style="color:blue"} is the contact rate, and [$p$]{style="color:blue"} is the probability of contact with an infected host, and [$v$]{style="color:blue"} is the probability of transmission per contact.
+- Assume that the rate of new infections is given by [$\dfrac{dI}{dt} = S \times c \times p \times v$]{style="color:blue"} where [$S$]{style="color:blue"} is the number of susceptible hosts, [$c$]{style="color:blue"} is the contact rate, and [$p$]{style="color:blue"} is the probability of contact with an infected host, and [$v$]{style="color:blue"} is the probability of transmission per contact.
 
 ------------------------------------------------------------------------
 
--   [$p$]{style="color:blue"} is usually assumed to be the disease prevalence, [$\dfrac{I}{N}$]{style="color:blue"}.
+- [$p$]{style="color:blue"} is usually assumed to be the disease prevalence, [$\dfrac{I}{N}$]{style="color:blue"}.
 
--   Hence, the rate of new infections, [$\dfrac{dI}{dt} = S \times c \times \dfrac{I}{N}  \times v$]{style="color:blue;"}.
-
-------------------------------------------------------------------------
-
--   In frequency dependent transmission, the contact rate [$c$]{style="color:blue"} is also assumed to be constant, say [$c = \eta$]{style="color:blue"} irrespective of population density, [$\dfrac{N}{A}$]{style="color:blue"}, where [$N$]{style="color:blue"} is the population size and [$A$]{style="color:blue"} is the area occupied by the population.
--   Hence, [$\dfrac{dI}{dt} = S \times \eta \times v \times \dfrac{I}{N}$]{style="color:blue"}
--   Therefore, [$\dfrac{dI}{dt} = \beta S \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta = \eta \times v$]{style="color:blue"}, and [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}.
+- Hence, the rate of new infections, [$\dfrac{dI}{dt} = S \times c \times \dfrac{I}{N}  \times v$]{style="color:blue;"}.
 
 ------------------------------------------------------------------------
 
--   [*Frequency-dependent/mass action transmission*]{style="color:tomato;"} is often used to model sexually-transmitted diseases and diseases with heterogeneity in contact rates.
--   Sexual transmission in this case does not depend on how many infected individuals are in the population.
+- In frequency dependent transmission, the contact rate [$c$]{style="color:blue"} is also assumed to be constant, say [$c = \eta$]{style="color:blue"} irrespective of population density, [$\dfrac{N}{A}$]{style="color:blue"}, where [$N$]{style="color:blue"} is the population size and [$A$]{style="color:blue"} is the area occupied by the population.
+- Hence, [$\dfrac{dI}{dt} = S \times \eta \times v \times \dfrac{I}{N}$]{style="color:blue"}
+- Therefore, [$\dfrac{dI}{dt} = \beta S \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta = \eta \times v$]{style="color:blue"}, and [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}.
+
+------------------------------------------------------------------------
+
+- [*Frequency-dependent/mass action transmission*]{style="color:tomato;"} is often used to model sexually-transmitted diseases and diseases with heterogeneity in contact rates.
+- Sexual transmission in this case does not depend on how many infected individuals are in the population.
 
 ------------------------------------------------------------------------
 
 #### Density dependent transmission
 
--   The rate of contact between individuals depends on the population density, [$\dfrac{N}{A}$]{style="color:blue"}.
+- The rate of contact between individuals depends on the population density, [$\dfrac{N}{A}$]{style="color:blue"}.
 
--   Transmission also depends on [$p$]{style="color:blue"} - the probability that a given contact is with an infected individual, often taken to be [$\dfrac{I}{N}$]{style="color:blue"}.
+- Transmission also depends on [$p$]{style="color:blue"} - the probability that a given contact is with an infected individual, often taken to be [$\dfrac{I}{N}$]{style="color:blue"}.
 
 ------------------------------------------------------------------------
 
--   The density-dependent transmission is therefore given as [$\lambda = \beta \times \dfrac{I}{A}$]{style="color:blue"}.
+- The density-dependent transmission is therefore given as [$\lambda = \beta \times \dfrac{I}{A}$]{style="color:blue"}.
 
--   Here, because transmission increases with the density of infected individuals, it is called density-dependent transmission.
+- Here, because transmission increases with the density of infected individuals, it is called density-dependent transmission.
 
 ::: {.callout-note collapse="true" icon="false"}
--   Notice that [$\lambda = \beta \times \dfrac{I}{N} \times \dfrac{N}{A}$]{style="color:blue"} and the $N's$ cancel out.
+- Notice that [$\lambda = \beta \times \dfrac{I}{N} \times \dfrac{N}{A}$]{style="color:blue"} and the $N's$ cancel out.
 
--   [$A$]{style="color:blue"} is often ignored.
+- [$A$]{style="color:blue"} is often ignored.
 :::
 
 ------------------------------------------------------------------------
 
--   [*Density dependent transmission*]{style="color:tomato;"} can be used to model airborne and directly transmitted diseases, for example, measles.
+- [*Density dependent transmission*]{style="color:tomato;"} can be used to model airborne and directly transmitted diseases, for example, measles.
 
 ------------------------------------------------------------------------
 
@@ -129,7 +129,7 @@ Why does the frequency-dependent transmission contain [$\dfrac{1}{N}$]{style="co
 This is one of the most confused and debated concepts in disease modelling. Several studies have attempted to clarify it, including the brilliant work by @begon2002clarification. Most of the clarifications provided here are based on this paper.
 :::
 
--   We will only use the [density-dependent]{style="color:tomato;"} formulation in this course.
+- We will only use the [density-dependent]{style="color:tomato;"} formulation in this course.
 
 ------------------------------------------------------------------------
 
@@ -147,9 +147,9 @@ This is one of the most confused and debated concepts in disease modelling. Seve
 
 ##### Some notes on the recovery process
 
--   If the duration of infection is [$\dfrac{1}{\gamma}$]{style="color:blue"}, then the rate at which infected individuals recover is [$\gamma$]{style="color:blue"}.
+- If the duration of infection is [$\dfrac{1}{\gamma}$]{style="color:blue"}, then the rate at which infected individuals recover is [$\gamma$]{style="color:blue"}.
 
--   The average infectious period is often [estimated from epidemiological data]{style="color:tomato;"}.
+- The average infectious period is often [estimated from epidemiological data]{style="color:tomato;"}.
 
 ::: {.callout-note collapse="true" icon="false"}
 You will learn about parameter estimation in the model fitting and calibration lectures.
@@ -192,9 +192,9 @@ The SIR model can be formulated as:
 where [$\beta$]{style="color:blue;"} is the transmission rate, and [$\gamma$]{style="color:blue;"} is the recovery rate.
 
 ::: notes
--   We may or may not use the dot notation to denote the rate of change.
--   The terms are just **inflows** and **outflows**.
--   **Pause** for questions and clarifications.
+- We may or may not use the dot notation to denote the rate of change.
+- The terms are just **inflows** and **outflows**.
+- **Pause** for questions and clarifications.
 :::
 
 ------------------------------------------------------------------------
@@ -214,27 +214,27 @@ where $N$ is the total population size.
 ------------------------------------------------------------------------
 
 ::: {.callout-note collapse="true" icon="false"}
--   We represent the compartments as [population sizes]{style="color:tomato;"}.:
-    -   Some modellers often use [proportions]{style="color:tomato;"} instead of population sizes as a way to remove the dimensions from the equations.
+- We represent the compartments as [population sizes]{style="color:tomato;"}.:
+  - Some modellers often use [proportions]{style="color:tomato;"} instead of population sizes as a way to remove the dimensions from the equations.
 :::
 
 ------------------------------------------------------------------------
 
 ### Model assumptions
 
--   The population is closed: no births, deaths, or migration.
-    -   Implicitly: the epidemic occurs much faster than the time scale of births, deaths, or migration.
--   Individuals are infectious immediately after infection and remain infectious until they recover.
+- The population is closed: no births, deaths, or migration.
+  - Implicitly: the epidemic occurs much faster than the time scale of births, deaths, or migration.
+- Individuals are infectious immediately after infection and remain infectious until they recover.
 
 ------------------------------------------------------------------------
 
--   Mixing is *homogeneous*, i.e., [individuals mix randomly]{style="color:tomato;"}:
+- Mixing is *homogeneous*, i.e., [individuals mix randomly]{style="color:tomato;"}:
 
--   Individuals have an equal probability of coming into contact with any other individual in the population.
+- Individuals have an equal probability of coming into contact with any other individual in the population.
 
--   Transition rates are constant and do not change over time.
+- Transition rates are constant and do not change over time.
 
--   Individuals acquire "lifelong" immunity after recovery.
+- Individuals acquire "lifelong" immunity after recovery.
 
 ::: notes
 The $R$ compartment is an absorbing state in this model.
@@ -245,60 +245,60 @@ The $R$ compartment is an absorbing state in this model.
 ::: {.callout-caution collapse="true" icon="false"}
 #### Discussion
 
--   What diseases do you think the SIR model is appropriate for?
+- What diseases do you think the SIR model is appropriate for?
 :::
 
 ------------------------------------------------------------------------
 
--   The SIR model is appropriate for diseases that confer immunity after recovery. For example, measles and chicken pox.
--   Popularised by Kermack and McKendrick in 1927 [@kermack1927contribution]
-    -   A must-read paper for budding infectious disease modellers.
+- The SIR model is appropriate for diseases that confer immunity after recovery. For example, measles and chicken pox.
+- Popularised by Kermack and McKendrick in 1927 [@kermack1927contribution]
+  - A must-read paper for budding infectious disease modellers.
 
 ------------------------------------------------------------------------
 
 ### What questions can we answer with the SIR model?
 
--   The SIR model can be used to understand the dynamics of an epidemic:
-    -   How long will the epidemic last?
-    -   How many individuals will be infected (final epidemic size)?
-    -   When will the epidemic reach its peak?
+- The SIR model can be used to understand the dynamics of an epidemic:
+  - How long will the epidemic last?
+  - How many individuals will be infected (final epidemic size)?
+  - When will the epidemic reach its peak?
 
 ------------------------------------------------------------------------
 
 ## Solving the SIR model
 
--   Compartmental models cannot be solved analytically.
+- Compartmental models cannot be solved analytically.
 
--   We often perform two types of analyses to understand the [long term dynamics]{style="color:tomato;"} of the model:
+- We often perform two types of analyses to understand the [long term dynamics]{style="color:tomato;"} of the model:
 
-    -   Qualitative: threshold phenomena and analysis of equilibria (disease-free and endemic).\
-    -   Numerical simulations.
+  - Qualitative: threshold phenomena and analysis of equilibria (disease-free and endemic).\
+  - Numerical simulations.
 
 ::: callout-note
--   For this introductory course, we will use focus on simulation.
+- For this introductory course, we will use focus on simulation.
 :::
 
--   But first, let's do some qualitative analysis of the SIR.
+- But first, let's do some qualitative analysis of the SIR.
 
 ------------------------------------------------------------------------
 
 ### Threshold phenomena
 
--   Here, we study the conditions under which an epidemic will [grow or die out]{style="color:tomato;"} using the model equations.
+- Here, we study the conditions under which an epidemic will [grow or die out]{style="color:tomato;"} using the model equations.
 
 ------------------------------------------------------------------------
 
--   Consider the case where $I(0) = 1$ individual is introduced into a population of size $N$ at time $t = 0$.
+- Consider the case where $I(0) = 1$ individual is introduced into a population of size $N$ at time $t = 0$.
 
--   That means in a completely susceptible population, we have $S(0) = N - 1$ susceptible individuals.
+- That means in a completely susceptible population, we have $S(0) = N - 1$ susceptible individuals.
 
 ------------------------------------------------------------------------
 
--   At time 0, the disease will not spread if the rate of change of infections is negative, that is [$\dfrac{dI}{dt} < 0$]{style="color:blue;"}.
+- At time 0, the disease will not spread if the rate of change of infections is negative, that is [$\dfrac{dI}{dt} < 0$]{style="color:blue;"}.
 
--   Recall from the SIR model that [$\dfrac{dI}{dt} = \beta S I - \gamma I$]{style="color:blue;"}.
+- Recall from the SIR model that [$\dfrac{dI}{dt} = \beta S I - \gamma I$]{style="color:blue;"}.
 
--   Let's solve this equation at $t = 0$ by setting $I = 1$, assuming [$\dfrac{dI}{dt} < 0$]{style="color:blue;"}.
+- Let's solve this equation at $t = 0$ by setting $I = 1$, assuming [$\dfrac{dI}{dt} < 0$]{style="color:blue;"}.
 
 ------------------------------------------------------------------------
 
@@ -315,17 +315,17 @@ I (\beta S - \gamma) < 0
 
 ------------------------------------------------------------------------
 
--   Since at $t=0$$, I > 0$, we have [$S < \dfrac{\gamma}{\beta}$]{style="color:blue;"}.
+- Since at $t=0$$, I > 0$, we have [$S < \dfrac{\gamma}{\beta}$]{style="color:blue;"}.
 
--   [$\dfrac{\gamma}{\beta}$]{style="color:blue;"} is the relative removal rate.
+- [$\dfrac{\gamma}{\beta}$]{style="color:blue;"} is the relative removal rate.
 
 ------------------------------------------------------------------------
 
--   **Interpretation**:
+- **Interpretation**:
 
-    -   At $t = 0$, $S$ must be less than $\dfrac{\gamma}{\beta}$ for the epidemic to die out.
-    -   If the rate of removal/recovery is greater than the transmission rate, the epidemic will die out.
-    -   Any infection that cannot transmit to more than one host is going to die out.
+  - At $t = 0$, $S$ must be less than $\dfrac{\gamma}{\beta}$ for the epidemic to die out.
+  - If the rate of removal/recovery is greater than the transmission rate, the epidemic will die out.
+  - Any infection that cannot transmit to more than one host is going to die out.
 
 ------------------------------------------------------------------------
 
@@ -335,75 +335,75 @@ For the SIR model, the quantity [$\dfrac{\beta}{\gamma}$]{style="color:blue"} is
 
 #### The basic reproduction number, R0
 
--   The basic reproduction number, [$R0$]{style="color:blue"}, is the average number of secondary infections generated by a [single primary infection]{style="color:tomato"} in a [completely susceptible]{style="color:tomato"} population.
+- The basic reproduction number, [$R0$]{style="color:blue"}, is the average number of secondary infections generated by a [single primary infection]{style="color:tomato"} in a [completely susceptible]{style="color:tomato"} population.
 
--   The basic reproduction number is a key quantity in infectious disease epidemiology.
-
-------------------------------------------------------------------------
-
--   It is often represented as a single number or a range of high-low values.
-    -   For example, the $R0$ for measles is popularly known to be $12$ - $18$ [@guerra2017measlesR0].
+- The basic reproduction number is a key quantity in infectious disease epidemiology.
 
 ------------------------------------------------------------------------
 
--   $R0$ is often used to express the threshold phenomena in infectious disease epidemiology:
-    -   If $R0 > 1$, the epidemic will grow.
-    -   If $R0 < 1$, the epidemic will decline.
--   A pathogen's $R0$ value is determined by biological characteristics of the pathogen and the host's behaviour.
+- It is often represented as a single number or a range of high-low values.
+  - For example, the $R0$ for measles is popularly known to be $12$ - $18$ [@guerra2017measlesR0].
 
 ------------------------------------------------------------------------
 
--   Conceptually, $R0$ is given by
+- $R0$ is often used to express the threshold phenomena in infectious disease epidemiology:
+  - If $R0 > 1$, the epidemic will grow.
+  - If $R0 < 1$, the epidemic will decline.
+- A pathogen's $R0$ value is determined by biological characteristics of the pathogen and the host's behaviour.
+
+------------------------------------------------------------------------
+
+- Conceptually, $R0$ is given by
 
 $$
 R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}}{\text{Time}} \times \dfrac{\text{Time}}{\text{Infection}}
 $$
 
--   $R0$ is unitless and dimensionless.
+- $R0$ is unitless and dimensionless.
 
 ------------------------------------------------------------------------
 
 ### Numerical simulations
 
--   Numerical simulations can be performed with any programming language.
+- Numerical simulations can be performed with any programming language.
 
--   This course focuses on the R programming language because:
+- This course focuses on the R programming language because:
 
-    -   It is a popular language for data analysis and statistical computing.
-    -   It has a rich ecosystem of packages for solving differential equations.
-    -   It is free and open-source.
+  - It is a popular language for data analysis and statistical computing.
+  - It has a rich ecosystem of packages for solving differential equations.
+  - It is free and open-source.
 
 ------------------------------------------------------------------------
 
--   In R, we can use the `{deSolve}` package to solve the differential equations.
+- In R, we can use the `{deSolve}` package to solve the differential equations.
 
--   To solve the model in R with `{deSolve}`, we will always need to define at least three things:
+- To solve the model in R with `{deSolve}`, we will always need to define at least three things:
 
-    -   The model equations.
-    -   The initial parameter values.
-    -   The initial conditions (population sizes).
+  - The model equations.
+  - The initial parameter values.
+  - The initial conditions (population sizes).
 
 ------------------------------------------------------------------------
 
 #### Practicals
 
--   Let's do a code walk through in R using the script [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
-    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Let's do a code walk through in R using the script [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
+  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 
 ::: {.callout-caution collapse="true" icon="false"}
 #### Discussion
 
--   What happens if we increase or decrease the value of $R0$?
--   What happens if we increase or decrease the value of the infectious period?
--   How can we flatten the curve?
+- What happens if we increase or decrease the value of $R0$?
+- What happens if we increase or decrease the value of the infectious period?
+- How can we flatten the curve?
 :::
 
 ::: notes
--   We can flatten the curve by reducing the value of $R0$.
--   In reality, we can reduce $R0$ by implementing control measures such as social distancing, wearing masks, and vaccination.
--   These control measures reduce the number of contacts between individuals or the probability of infection, which in turn reduces the transmission rate.
+- We can flatten the curve by reducing the value of $R0$.
+- In reality, we can reduce $R0$ by implementing control measures such as social distancing, wearing masks, and vaccination.
+- These control measures reduce the number of contacts between individuals or the probability of infection, which in turn reduces the transmission rate.
 :::
 
 ------------------------------------------------------------------------

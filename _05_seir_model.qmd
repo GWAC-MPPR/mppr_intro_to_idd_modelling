@@ -10,8 +10,8 @@
 :::
 
 ::: {.column width="70%"}
--   Some diseases have an [latent/exposed period]{style="color:tomato;"} during which individuals are [infected but not yet infectious]{style="color:tomato;"}. Examples include pertussis, COVID-19, and Ebola.
--   Disease transmission does not occur during the latent period because of low levels of the virus in the host.
+- Some diseases have an [latent/exposed period]{style="color:tomato;"} during which individuals are [infected but not yet infectious]{style="color:tomato;"}. Examples include pertussis, COVID-19, and Ebola.
+- Disease transmission does not occur during the latent period because of low levels of the virus in the host.
 :::
 :::::
 
@@ -27,9 +27,9 @@
 :::
 
 ::: {.column width="50%"}
--   The SEIR model extends the SIR model to include an exposed compartment, [$E$]{style="color:blue;"}.
--   [$E$]{style="color:blue;"}: infected but are not yet infectious.
--   Individuals stay in [$E$]{style="color:blue;"} for [$1/\sigma$]{style="color:blue;"} days before moving to $I$.
+- The SEIR model extends the SIR model to include an exposed compartment, [$E$]{style="color:blue;"}.
+- [$E$]{style="color:blue;"}: infected but are not yet infectious.
+- Individuals stay in [$E$]{style="color:blue;"} for [$1/\sigma$]{style="color:blue;"} days before moving to $I$.
 :::
 :::::
 
@@ -54,11 +54,11 @@ Model equations: \begin{align*}
 
 ### SEIR model with births and deaths
 
--   Let's relax the assumption about births and deaths in the population.
+- Let's relax the assumption about births and deaths in the population.
 
--   We will assume that the susceptible population is replenished with new individuals at a constant rate, $\mu$.
+- We will assume that the susceptible population is replenished with new individuals at a constant rate, $\mu$.
 
--   We will also assume that everyone dies at a constant rate, $\mu$.
+- We will also assume that everyone dies at a constant rate, $\mu$.
 
 ------------------------------------------------------------------------
 
@@ -107,9 +107,9 @@ What is the $R0$ of the SEIR model?
 
 ### The R0 of the SEIR Model
 
--   Beyond the SIR model, calculating $R0$ for more complex models can be challenging due to the presence of multiple compartments.
+- Beyond the SIR model, calculating $R0$ for more complex models can be challenging due to the presence of multiple compartments.
 
--   For complex models, we use the [next generation matrix]{style="color:tomato;"} approach [@diekmann1990definition; @diekmann2010construction].
+- For complex models, we use the [next generation matrix]{style="color:tomato;"} approach [@diekmann1990definition; @diekmann2010construction].
 
 ------------------------------------------------------------------------
 
@@ -127,10 +127,10 @@ Using the next generation matrix approach, we can show that the SEIR model with 
 
 #### R Practicals
 
--   We can use the same approach as the SIR model to simulate the SEIR model.
+- We can use the same approach as the SIR model to simulate the SEIR model.
 
--   Modify the [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals) script to simulate the SEIR model.
-    - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Modify the [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals) script to simulate the SEIR model.
+  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
 
 ------------------------------------------------------------------------
 
