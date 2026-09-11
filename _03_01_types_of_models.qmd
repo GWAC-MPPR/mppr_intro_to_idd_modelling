@@ -50,7 +50,7 @@
 ::: {.column width="50%"}
 ### Mechanistic models
 
-- Examples: SIR, SEIR, agent-based models
+- Examples: compartmental models (SIR, SEIR), and agent-based models
 :::
 
 ::: {.column width="50%"}
@@ -342,7 +342,7 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ------------------------------------------------------------------------
 
-## Network models
+## Network models as a generic framework
 
 ::::: columns
 ::: {.column width="60%"}
@@ -427,14 +427,14 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ### The modelling for decision-making process
 
-![The modelling process involves balancing realism, tractability, and generality. Source: [Heesterbeek et al, 2015](https://doi.org/10.1126/science.aaa4339)](images/modelling_process.png){width=70%}
+![Source: [Heesterbeek et al, 2015](https://doi.org/10.1126/science.aaa4339)](images/modelling_process.png){width=70%}
 
 ------------------------------------------------------------------------
 
 ::: {.callout-important icon="false"}
 ### Discussion
 
-Consider modeling influenza transmission in a university:
+Consider the case of modeling Ebola transmission in a small community in the DRC:
 
 1.  What type of model would you choose and why?
 2.  What heterogeneities would be important to include?
@@ -446,7 +446,7 @@ Consider modeling influenza transmission in a university:
 
 ## Summary: Choosing the right model type
 
-- [**Start simple**]{style="color:tomato"}: Begin with the simplest model that addresses your question
+- [**Start simple**]{style="color:tomato"}: Keep the question at the forefront
 - [**Add complexity gradually**]{style="color:tomato"}: Only when justified by data or research needs
 - [**Consider your audience**]{style="color:tomato"}: Policymakers may prefer simpler, more interpretable models
 - [**Validate carefully**]{style="color:tomato"}: More complex models require more validation

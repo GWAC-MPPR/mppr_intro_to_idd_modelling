@@ -40,7 +40,7 @@
 
 ## What are models used for?
 
-- Generally, models can be used to [predict]{style="color:tomato; font-weight:bold;"} and [understand/explain]{style="color:tomato; font-weight:bold;"} the dynamics of infectious diseases.
+- Generally, models can be used to [predict the future course]{style="color:tomato; font-weight:bold;"} and [understand/explain]{style="color:tomato; font-weight:bold;"} the dynamics of infectious diseases.
 
 ------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@
 
 - [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model [reproduce]{style="color:blue"} observed data and [predict]{style="color:blue"} future outcomes?
 - [Transparency]{style="color:tomato; font-weight:bold;"}: is it [easy to understand and interpret]{style="color:blue"} the model and its outputs?
-  - This is affected by the [model's complexity]{style="color:tomato"}
+  - Affected by the [model's complexity]{style="color:tomato"}
 - [Flexibility]{style="color:tomato; font-weight:bold;"}: the ability of the model to be [adapted to different scenarios]{style="color:blue"}.
   - For example, can the model be easily modified to account for new data or changing conditions?
 
@@ -72,7 +72,13 @@ These will be touched on in the scenario modelling lectures.
 ::: {.callout-important icon="false"}
 ### Discussion
 
-How are these two uses impacted by accuracy, transparency, and flexibility? That is, which of these factors is more important for each use?
+How are the two model use cases (prediction and explanation/understanding) impacted by:
+
+- accuracy,
+- transparency,
+- flexibility
+
+That is, which of these factors is more important for each use case?
 :::
 
 ------------------------------------------------------------------------
@@ -87,7 +93,8 @@ How are these two uses impacted by accuracy, transparency, and flexibility? That
 
 - Host [behaviour]{style="color:blue"} is often [difficult to predict]{style="color:blue"}.
 - The pathogen often has [known/unknown characteristics]{style="color:tomato"} that are difficult to capture.
-- [Data]{style="color:blue"} is often not available or is of poor quality.
+- [Data]{style="color:blue"} is often not available or is of poor quality:
+  - Very rare to come across good quality ready to use data
 
 ------------------------------------------------------------------------
 

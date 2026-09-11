@@ -27,7 +27,7 @@ This model groups individuals into three *disease states*:
 
 ------------------------------------------------------------------------
 
-The transmission term is often defined through the [force of infection (FOI), $\lambda$]{style="color:tomato;"}.
+The transmission term is defined through the [force of infection (FOI), $\lambda$]{style="color:tomato;"}
 
 ![](images/model_diagrams/model_diagrams.002.jpeg){width="70%"}
 
@@ -64,7 +64,8 @@ The rate of contact between individuals is constant irrespective of the populati
 
 ------------------------------------------------------------------------
 
-- Hence, the frequency-dependent mass action is given by [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta$]{style="color:blue"} is the transmission rate.
+- The frequency-dependent/mass action FOI is given by [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta$]{style="color:blue"} is the transmission rate.
+- Assumes transmission does not increase with the density of infected individuals, [$\dfrac{I}{N}$]{style="color:blue"}.
 
 ------------------------------------------------------------------------
 
@@ -79,9 +80,9 @@ The rate of contact between individuals is constant irrespective of the populati
 
 ------------------------------------------------------------------------
 
-- The density-dependent transmission is therefore given as [$\lambda = \beta \times \dfrac{I}{A}$]{style="color:blue"}.
+- The density-dependent transmission is given as [$\lambda = \beta \times I$]{style="color:blue"}.
 
-- Here, because transmission increases with the density of infected individuals, it is called density-dependent transmission.
+- Assumes transmission increases with the density of infected individuals, [$\dfrac{I}{N}$]{style="color:blue"}.
 
 ------------------------------------------------------------------------
 
@@ -178,13 +179,12 @@ where $N$ is the total population size.
 ------------------------------------------------------------------------
 
 ::: {.callout-note collapse="true" icon="false"}
-- We represent the compartments as [population sizes]{style="color:tomato;"}.:
-  - Some modellers often use [proportions]{style="color:tomato;"} instead of population sizes as a way to remove the dimensions from the equations.
+- Compartments can be represented as [population sizes]{style="color:tomato;"} or [proportions]{style="color:tomato;"}
 :::
 
 ------------------------------------------------------------------------
 
-### Model assumptions
+### SIR model assumptions
 
 - The population is closed: no births, deaths, or migration.
   - Implicitly: the epidemic occurs much faster than the time scale of births, deaths, or migration.
@@ -279,7 +279,7 @@ Factor out $I$, and we get
 I (\beta S - \gamma) < 0
 \end{equation*}
 
-- Since at $t=0$$, I > 0$, we have [$S < \dfrac{\gamma}{\beta}$]{style="color:blue;"}.
+- Since at $t=0$$, I > 0$, we have [$\beta S - \gamma < 0$]{style="color:blue;"}, and [$S < \dfrac{\gamma}{\beta}$]{style="color:blue;"}.
 
 - [$\dfrac{\gamma}{\beta}$]{style="color:blue;"} is the relative removal rate.
 

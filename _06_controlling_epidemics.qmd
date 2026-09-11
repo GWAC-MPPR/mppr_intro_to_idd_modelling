@@ -128,7 +128,7 @@ For a background on non-pharmaceutical interventions, refer to @sec-npi.
 
 - Conceptually, NPIs usually act to either [reduce the transmission rate]{style="color:tomato"}, $\beta$ or prevent infected individuals from transmitting.
 
-- NPIs like isolation, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by [reducing the contact rate]{style="color:tomato"} between susceptible and infectious individuals.
+- NPIs like quarantine, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by [reducing the contact rate]{style="color:tomato"} between susceptible and infectious individuals.
 
 - Hygiene measures reduce the [probability of transmission]{style="color:tomato"} per contact, thereby reducing the transmission rate, $\beta$, since $\beta = c \times p$.
 

@@ -88,9 +88,11 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 - Examples:
 
-  - Quarantine,
-  - Physical/social distancing, and
-  - Mask-wearing.
+  - Quarantine & Isolation
+  - Hygiene improvements
+  - Safe and dignified burials
+  - Physical distancing
+  - Mask-wearing
 :::
 :::::
 
@@ -99,6 +101,7 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 #### Quarantine
 
 - [Isolation of individuals who may have been exposed to a contagious disease.]{style="color:tomato"}
+- Applies to [exposed but asymptomatic individuals]{style="color:tomato"} who may or may not be infected
 - Advantage is that it's simple and its effectiveness does not depend on the disease.
 - Disadvantages include:
   - Infringement on individual rights
