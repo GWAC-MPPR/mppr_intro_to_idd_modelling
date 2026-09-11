@@ -27,9 +27,9 @@ This model groups individuals into three *disease states*:
 
 ------------------------------------------------------------------------
 
-![](images/model_diagrams/model_diagrams.002.jpeg){width="70%"}
-
 The transmission term is often defined through the [force of infection (FOI), $\lambda$]{style="color:tomato;"}.
+
+![](images/model_diagrams/model_diagrams.002.jpeg){width="70%"}
 
 ------------------------------------------------------------------------
 
@@ -238,6 +238,8 @@ The $R$ compartment is an absorbing state in this model.
   - Qualitative: threshold phenomena and analysis of equilibria (disease-free and endemic).\
   - Numerical simulations.
 
+------------------------------------------------------------------------
+
 ::: callout-note
 - For this introductory course, we will focus on simulation.
 :::
@@ -276,8 +278,6 @@ Factor out $I$, and we get
 \begin{equation*}
 I (\beta S - \gamma) < 0
 \end{equation*}
-
-------------------------------------------------------------------------
 
 - Since at $t=0$$, I > 0$, we have [$S < \dfrac{\gamma}{\beta}$]{style="color:blue;"}.
 

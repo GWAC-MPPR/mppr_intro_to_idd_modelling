@@ -20,6 +20,8 @@
 
 ## Mathematical approach: Mechanistic vs. Phenomenological
 
+------------------------------------------------------------------------
+
 ::::: columns
 ::: {.column width="50%"}
 ### Mechanistic models
@@ -149,8 +151,8 @@ Think of a recent epidemic (e.g., COVID-19, Mpox, Ebola). Which type of model wo
 ::: {.column width="50%"}
 ### Stochastic models
 
-- Include [random variation]{style="color:orange"}
 - Same input can produce [different outputs]{style="color:orange"}
+- Include [random variation]{style="color:orange"}
 - Account for uncertainty and chance events
 - Examples: stochastic SIR, branching processes
 :::
@@ -220,6 +222,8 @@ Think of a recent epidemic (e.g., COVID-19, Mpox, Ebola). Which type of model wo
 
 ## Time: Discrete vs. Continuous models
 
+------------------------------------------------------------------------
+
 ::::: columns
 ::: {.column width="50%"}
 ### Discrete time models
@@ -282,55 +286,29 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ------------------------------------------------------------------------
 
-## Spatial considerations
-
-::::: columns
-::: {.column width="50%"}
-### Non-spatial (well-mixed) models
-
-- Assume [homogeneous mixing]{style="color:blue"}
-- All individuals have [equal contact]{style="color:blue"} probability
-- Simpler to analyze and implement
-- Good for [small, homogeneous]{style="color:blue"} populations
-:::
-
-::: {.column width="50%"}
-### Spatial models
-
-- Account for [geographic structure]{style="color:orange"}
-- Include [movement patterns]{style="color:orange"}
-- Can model [local transmission]{style="color:orange"}
-- Important for [large-scale]{style="color:orange"} epidemics
-:::
-:::::
+## Spatial vs non-spatial models
 
 ------------------------------------------------------------------------
 
-::::: columns
-::: {.column width="50%"}
-### Non-spatial (well-mixed) models
-
-- Simpler to analyze and implement
-- Good for [small, homogeneous]{style="color:blue"} populations
-:::
-
-::: {.column width="50%"}
-### Spatial models
-
-- Can model [local transmission]{style="color:orange"}
-- Important for [large-scale]{style="color:orange"} epidemics
-:::
-:::::
+| Aspect | Non-spatial | Spatial |
+|---|---|---|
+| **Mixing assumption** | [Homogeneous mixing]{style="color:blue"} | [Geographic structure]{style="color:orange"} |
+| **Contact patterns** | [Equal contact]{style="color:blue"} probability | [Movement patterns]{style="color:orange"} |
+| **Complexity** | Simpler | More complex |
+| **Transmission** | Population-wide | [Local transmission]{style="color:orange"} |
+| **Best for** | [Small, homogeneous]{style="color:blue"} populations | [Large-scale]{style="color:orange"} epidemics |
 
 ------------------------------------------------------------------------
 
-- [**Metapopulation models**]{style="color:tomato"}:
+### Common types of spatial models
+
+- [**Metapopulation models**]{style="color:tomato"}
   - Discrete patches connected by migration
   - Good for cities/regions connected by travel
 
 ------------------------------------------------------------------------
 
-- [**Network models**]{style="color:tomato"}:
+- [**Network models**]{style="color:tomato"}
   - Individuals as nodes, contacts as edges
   - Can represent social or transportation networks
 
@@ -338,38 +316,27 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ## Population structure: Homogeneous vs. Heterogeneous
 
-::::: columns
-::: {.column width="50%"}
+------------------------------------------------------------------------
+
 ### Homogeneous models
 
 - All individuals are [identical]{style="color:blue"}
 - Same [contact rates]{style="color:blue"}
 - Same [susceptibility]{style="color:blue"}
 - Simpler to analyze
-:::
 
-::: {.column width="50%"}
-### Heterogeneous models
-
-- Account for [individual differences]{style="color:orange"}:
-  - Age groups
-  - Risk behaviors
-  - Vaccination status
-  - Geographic location
-- More realistic but complex
-:::
-:::::
 
 ------------------------------------------------------------------------
 
-### Common types of heterogeneity
+### Heterogeneous models
+
+- Account for [individual differences/heterogeneities]{style="color:orange"}
+
+#### Common types of heterogeneity
 
 - [**Age structure**]{style="color:tomato"}: Different contact patterns and susceptibility by age
 - [**Risk groups**]{style="color:tomato"}: High-risk vs. low-risk populations
 - [**Behavioral differences**]{style="color:tomato"}: Compliance with interventions
-
-------------------------------------------------------------------------
-
 - [**Immunity status**]{style="color:tomato"}: Vaccinated, previously infected, naive
 - [**Geographic**]{style="color:tomato"}: Urban vs. rural, different regions
 

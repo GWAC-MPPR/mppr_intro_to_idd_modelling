@@ -20,12 +20,10 @@
 
 - To do this, we [divide the population into different age groups]{style="color:tomato"} and model the disease dynamics within each age group.
 
-- Let's extend the SIR model to include age structure.
-
 ------------------------------------------------------------------------
 
+- Let's extend the SIR model to include age structure.
 - We will divide the population into [$n$ age groups]{style="color:tomato"}.
-
 - Because the homogeneous model has 3 compartments, the age structured one will have $3n$ compartments: $S_1, I_1, R_1, S_2, I_2, R_2, ..., S_n, I_n, R_n$.
 
 ------------------------------------------------------------------------

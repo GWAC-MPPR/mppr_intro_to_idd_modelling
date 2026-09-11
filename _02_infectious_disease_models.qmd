@@ -14,7 +14,7 @@
 ::::: columns
 ::: {.column width="60%"}
 - By definition, ["all models are wrong, but some are useful"]{style="color:tomato"} [@Box1979].
-  - Good enough models are those that capture the [essential features]{style="color:tomato"} of the system being studied.
+- Good enough models are those that capture the [essential features]{style="color:tomato"} of the system being studied.
 :::
 
 ::: {.column width="40%"}
@@ -38,6 +38,23 @@
 
 ------------------------------------------------------------------------
 
+## What are models used for?
+
+- Generally, models can be used to [predict]{style="color:tomato; font-weight:bold;"} and [understand/explain]{style="color:tomato; font-weight:bold;"} the dynamics of infectious diseases.
+
+------------------------------------------------------------------------
+
+### Understanding or explaining disease dynamics
+
+- Models can be used to [understand how a disease spreads]{style="color:tomato"} and how its spread can be [controlled]{style="color:tomato"}.
+- The insights gained from models can be used to:
+  - [inform]{style="color:blue"} public health policy and interventions.
+  - [design]{style="color:blue"} interventions to control the spread of the disease, for example, randomised controlled trials.
+  - [collect]{style="color:blue"} new data.
+  - [build]{style="color:blue"} predictive models.
+
+------------------------------------------------------------------------
+
 ## Factors that influence model formulation/choice
 
 - [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model [reproduce]{style="color:blue"} observed data and [predict]{style="color:blue"} future outcomes?
@@ -52,26 +69,11 @@ These will be touched on in the scenario modelling lectures.
 
 ------------------------------------------------------------------------
 
-## What are models used for?
-
-- Generally, models can be used to [predict]{style="color:tomato; font-weight:bold;"} and [understand/explain]{style="color:tomato; font-weight:bold;"} the dynamics of infectious diseases.
-
 ::: {.callout-important icon="false"}
 ### Discussion
 
 How are these two uses impacted by accuracy, transparency, and flexibility? That is, which of these factors is more important for each use?
 :::
-
-------------------------------------------------------------------------
-
-### Understanding or explaining disease dynamics
-
-- Models can be used to [understand how a disease spreads]{style="color:tomato"} and how its spread can be [controlled]{style="color:tomato"}.
-- The insights gained from models can be used to:
-  - [inform]{style="color:blue"} public health policy and interventions.
-  - [design]{style="color:blue"} interventions to control the spread of the disease, for example, randomised controlled trials.
-  - [collect]{style="color:blue"} new data.
-  - [build]{style="color:blue"} predictive models.
 
 ------------------------------------------------------------------------
 
