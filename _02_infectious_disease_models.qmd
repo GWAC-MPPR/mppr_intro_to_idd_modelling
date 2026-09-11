@@ -64,21 +64,6 @@ How are these two uses impacted by accuracy, transparency, and flexibility? That
 
 ------------------------------------------------------------------------
 
-### Prediction of the future course
-
-::::: columns
-::: {.column width="40%"}
-- Must be [accurate]{style="color:tomato;"}.
-- "But the estimate proved to be off. Way, way off. Like, 65 times worse than what ended up happening."
-:::
-
-::: {.column width="60%"}
-![](images/wrong_ebola_deaths_estimate.png){fig-cap="[CDC’s top modeler courts controversy with disease estimate](https://apnews.com/domestic-news-domestic-news-fbb4fc8921d54201a1c5ca91e5b601f5)"}
-:::
-:::::
-
-------------------------------------------------------------------------
-
 ### Understanding or explaining disease dynamics
 
 - Models can be used to [understand how a disease spreads]{style="color:tomato"} and how its spread can be [controlled]{style="color:tomato"}.
@@ -111,8 +96,6 @@ How are these two uses impacted by accuracy, transparency, and flexibility? That
   - [Simplifications of reality]{style="color:tomato"} and do not capture all the [complexities]{style="color:tomato"} of the system being studied.
   - Only as good as the [data]{style="color:tomato"} used to calibrate them.
   - Sensitive to the [assumptions]{style="color:tomato"} made during their formulation.
-  - [Computationally expensive]{style="color:tomato"} and require a lot of data to run.
-  - [Difficult to interpret]{style="color:tomato"} and communicate to non-experts.
 
 ------------------------------------------------------------------------
 

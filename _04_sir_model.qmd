@@ -64,33 +64,7 @@ The rate of contact between individuals is constant irrespective of the populati
 
 ------------------------------------------------------------------------
 
-- Recall that transmission also depends on the probability of contact with an infected host, [$p$]{style="color:blue"}, which is assumed to be [$\dfrac{I}{N}$]{style="color:blue"}.
-
 - Hence, the frequency-dependent mass action is given by [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta$]{style="color:blue"} is the transmission rate.
-
-------------------------------------------------------------------------
-
-::: {.callout-caution collapse="true" icon="false"}
-#### Question
-
-Why does the frequency-dependent transmission contain [$\dfrac{1}{N}$]{style="color:blue"} if it does not depend on the population density?
-:::
-
-------------------------------------------------------------------------
-
-- Assume that the rate of new infections is given by [$\dfrac{dI}{dt} = S \times c \times p \times v$]{style="color:blue"} where [$S$]{style="color:blue"} is the number of susceptible hosts, [$c$]{style="color:blue"} is the contact rate, and [$p$]{style="color:blue"} is the probability of contact with an infected host, and [$v$]{style="color:blue"} is the probability of transmission per contact.
-
-------------------------------------------------------------------------
-
-- [$p$]{style="color:blue"} is usually assumed to be the disease prevalence, [$\dfrac{I}{N}$]{style="color:blue"}.
-
-- Hence, the rate of new infections, [$\dfrac{dI}{dt} = S \times c \times \dfrac{I}{N}  \times v$]{style="color:blue;"}.
-
-------------------------------------------------------------------------
-
-- In frequency dependent transmission, the contact rate [$c$]{style="color:blue"} is also assumed to be constant, say [$c = \eta$]{style="color:blue"} irrespective of population density, [$\dfrac{N}{A}$]{style="color:blue"}, where [$N$]{style="color:blue"} is the population size and [$A$]{style="color:blue"} is the area occupied by the population.
-- Hence, [$\dfrac{dI}{dt} = S \times \eta \times v \times \dfrac{I}{N}$]{style="color:blue"}
-- Therefore, [$\dfrac{dI}{dt} = \beta S \times \dfrac{I}{N}$]{style="color:blue"}, where [$\beta = \eta \times v$]{style="color:blue"}, and [$\lambda = \beta \times \dfrac{I}{N}$]{style="color:blue"}.
 
 ------------------------------------------------------------------------
 
@@ -103,19 +77,11 @@ Why does the frequency-dependent transmission contain [$\dfrac{1}{N}$]{style="co
 
 - The rate of contact between individuals depends on the population density, [$\dfrac{N}{A}$]{style="color:blue"}.
 
-- Transmission also depends on [$p$]{style="color:blue"} - the probability that a given contact is with an infected individual, often taken to be [$\dfrac{I}{N}$]{style="color:blue"}.
-
 ------------------------------------------------------------------------
 
 - The density-dependent transmission is therefore given as [$\lambda = \beta \times \dfrac{I}{A}$]{style="color:blue"}.
 
 - Here, because transmission increases with the density of infected individuals, it is called density-dependent transmission.
-
-::: {.callout-note collapse="true" icon="false"}
-- Notice that [$\lambda = \beta \times \dfrac{I}{N} \times \dfrac{N}{A}$]{style="color:blue"} and the $N's$ cancel out.
-
-- [$A$]{style="color:blue"} is often ignored.
-:::
 
 ------------------------------------------------------------------------
 
@@ -128,8 +94,6 @@ Why does the frequency-dependent transmission contain [$\dfrac{1}{N}$]{style="co
 
 This is one of the most confused and debated concepts in disease modelling. Several studies have attempted to clarify it, including the brilliant work by @begon2002clarification. Most of the clarifications provided here are based on this paper.
 :::
-
-- We will only use the [density-dependent]{style="color:tomato;"} formulation in this course.
 
 ------------------------------------------------------------------------
 
@@ -342,7 +306,7 @@ For the SIR model, the quantity [$\dfrac{\beta}{\gamma}$]{style="color:blue"} is
 ------------------------------------------------------------------------
 
 - It is often represented as a single number or a range of high-low values.
-  - For example, the $R0$ for measles is popularly known to be $12$ - $18$ [@guerra2017measlesR0].
+  - For example, the $R0$ for measles is popularly known to be $12$ - $18$.
 
 ------------------------------------------------------------------------
 

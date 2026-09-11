@@ -109,7 +109,7 @@ What is the $R0$ of the SEIR model?
 
 - Beyond the SIR model, calculating $R0$ for more complex models can be challenging due to the presence of multiple compartments.
 
-- For complex models, we use the [next generation matrix]{style="color:tomato;"} approach [@diekmann1990definition; @diekmann2010construction].
+- For complex models, we use the [next generation matrix]{style="color:tomato;"} approach.
 
 ------------------------------------------------------------------------
 

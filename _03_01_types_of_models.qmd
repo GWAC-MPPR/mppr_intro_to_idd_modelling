@@ -170,8 +170,6 @@ Think of a recent epidemic (e.g., COVID-19, Mpox, Ebola). Which type of model wo
 
 \- Understanding [general trends]{style="color:blue"}
 
-\- [Parameter estimation]{style="color:blue"}
-
 \- When computational [efficiency]{style="color:blue"} is important
 :::
 
@@ -335,12 +333,6 @@ $$\frac{dS}{dt} = -\beta S I$$
 - [**Network models**]{style="color:tomato"}:
   - Individuals as nodes, contacts as edges
   - Can represent social or transportation networks
-
-------------------------------------------------------------------------
-
-- [**Continuous space models**]{style="color:tomato"}:
-  - Individuals distributed in continuous space
-  - Include local transmission kernels
 
 ------------------------------------------------------------------------
 
