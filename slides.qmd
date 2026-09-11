@@ -63,7 +63,7 @@ editor_options:
 
 {{< include _06_controlling_epidemics.qmd >}}
 
-# Brief notes on modelling host heterogeneity
+# Brief overview of modelling host heterogeneity
 
 {{< include _07_heterogeneities.qmd >}}
 
