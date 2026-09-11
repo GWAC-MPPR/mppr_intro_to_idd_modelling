@@ -290,6 +290,8 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ------------------------------------------------------------------------
 
+### Spatial vs non-spatial models
+
 | Aspect | Non-spatial | Spatial |
 |---|---|---|
 | **Mixing assumption** | [Homogeneous mixing]{style="color:blue"} | [Geographic structure]{style="color:orange"} |
