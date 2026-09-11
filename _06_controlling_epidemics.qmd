@@ -120,11 +120,11 @@ For a background on non-pharmaceutical interventions, refer to @sec-npi.
 
 ------------------------------------------------------------------------
 
-- Conceptually, NPIs usually act to either reduce the transmission rate, $\beta$ or prevent infected individuals from transmitting.
+- Conceptually, NPIs usually act to either [reduce the transmission rate]{style="color:tomato"}, $\beta$ or prevent infected individuals from transmitting.
 
-- NPIs like isolation, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by reducing the contact rate between susceptible and infectious individuals.
+- NPIs like isolation, social distancing and movement restrictions can reduce the transmission rate, $\beta$, by [reducing the contact rate]{style="color:tomato"} between susceptible and infectious individuals.
 
-- Hygiene measures reduce the probability of transmission per contact, thereby reducing the transmission rate, $\beta$, since $\beta = c \times p$.
+- Hygiene measures reduce the [probability of transmission]{style="color:tomato"} per contact, thereby reducing the transmission rate, $\beta$, since $\beta = c \times p$.
 
 ------------------------------------------------------------------------
 
@@ -153,9 +153,9 @@ The modified SIR model with a reduced transmission rate is as follows:
 
 ------------------------------------------------------------------------
 
-- The simplest form is to reduce $\beta$ by an NPI efficacy, say $\epsilon$.
+- The simplest form is to reduce $\beta$ by an [NPI efficacy]{style="color:blue"}, say $\epsilon$.
 
-- Assuming the NPI is implemented between $t_{\text{npi\_start}}$ and $t_{\text{npi\_end}}$, it means that $\beta$ remains the same before that period and is modified to $(1- \epsilon)\beta$ during the period of the NPI, where $0 \leq \epsilon \leq 1$.
+- Assuming the NPI is implemented between [$t_{\text{npi\_start}}$]{style="color:blue"} and [$t_{\text{npi\_end}}$]{style="color:blue"}, it means that $\beta$ remains the same before that period and is modified to [$(1- \epsilon)\beta$]{style="color:blue"} during the period of the NPI, where [$0 \leq \epsilon \leq 1$]{style="color:blue"}.
 
 - With this knowledge, we can define $\beta (t)$ mathematically as:
 
@@ -185,9 +185,9 @@ The modified SIR model with a reduced transmission rate is as follows:
 
 - For example, isolation is an NPI that prevents infected individuals from transmitting the disease.
 
-- This means that infected individuals in isolation do not contribute to the transmission of the disease and need to be removed from the infected compartment.
+- This means that infected individuals in isolation [do not contribute to the transmission]{style="color:tomato"} of the disease and need to be removed from the infected compartment.
 
-- Moving isolated individuals to a separate compartment allows us to track them separately in the model and apply relevant parameters.
+- Moving isolated individuals to a separate compartment allows us to [track them separately]{style="color:tomato"} in the model and apply relevant parameters.
 
 ------------------------------------------------------------------------
 

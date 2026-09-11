@@ -40,10 +40,10 @@
 
 ## Factors that influence model formulation/choice
 
-- [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model reproduce observed data and predict future outcomes?
-- [Transparency]{style="color:tomato; font-weight:bold;"}: is it easy to understand and interpret the model and its outputs?
-  - This is affected by the model's complexity
-- [Flexibility]{style="color:tomato; font-weight:bold;"}: the ability of the model to be adapted to different scenarios.
+- [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model [reproduce]{style="color:blue"} observed data and [predict]{style="color:blue"} future outcomes?
+- [Transparency]{style="color:tomato; font-weight:bold;"}: is it [easy to understand and interpret]{style="color:blue"} the model and its outputs?
+  - This is affected by the [model's complexity]{style="color:tomato"}
+- [Flexibility]{style="color:tomato; font-weight:bold;"}: the ability of the model to be [adapted to different scenarios]{style="color:blue"}.
   - For example, can the model be easily modified to account for new data or changing conditions?
 
 ::: notes
@@ -98,9 +98,9 @@ How are these two uses impacted by accuracy, transparency, and flexibility? That
 
 ## Limitations of infectious disease models
 
-- Host behaviour is often difficult to predict.
-- The pathogen often has known/unknown characteristics that are difficult to capture.
-- Data is often not available or is of poor quality.
+- Host [behaviour]{style="color:blue"} is often [difficult to predict]{style="color:blue"}.
+- The pathogen often has [known/unknown characteristics]{style="color:tomato"} that are difficult to capture.
+- [Data]{style="color:blue"} is often not available or is of poor quality.
 
 ------------------------------------------------------------------------
 

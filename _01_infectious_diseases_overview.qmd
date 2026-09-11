@@ -57,7 +57,7 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 ::: {.column width="60%"}
 - Activates the host's immune system to produce antibodies against the pathogen.
 - Generally applied to reduce the risk of infection and disease.
-- The most effective way to prevent infectious diseases.
+- [The most effective way to prevent infectious diseases.]{style="color:tomato"}
 :::
 :::::
 
@@ -84,7 +84,7 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 :::
 
 ::: {.column width="50%"}
-- Non-pharmaceutical interventions are measures that do not involve medical interventions.
+- Non-pharmaceutical interventions are measures that [do not]{style="color:tomato"} involve medical interventions.
 
 - Examples:
 
@@ -98,7 +98,7 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 #### Quarantine
 
-- *Isolation of individuals who may have been exposed to a contagious disease*.
+- [Isolation of individuals who may have been exposed to a contagious disease.]{style="color:tomato"}
 - Advantage is that it's simple and its effectiveness does not depend on the disease.
 - Disadvantages include:
   - Infringement on individual rights
@@ -110,9 +110,9 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 #### Contact tracing
 
-- Contact tracing is used to identify exposed individuals, i.e., individuals who might been in contact with an infected/infectious individual.
+- [Contact tracing is used to identify exposed individuals, i.e., individuals who might been in contact with an infected/infectious individual.]{style="color:tomato"}
 - It involves identifying, assessing, and managing people who have been exposed to a contagious disease to prevent further transmission.
-- It is a critical component of infectious disease surveillance and is often used in combination with other control measures.
+- It is a [critical component of infectious disease surveillance]{style="color:tomato"} and is often used in combination with other control measures.
 
 ------------------------------------------------------------------------
 

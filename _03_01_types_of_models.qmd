@@ -66,13 +66,13 @@
 ::: {.column width="50%"}
 **Advantages:**
 
-\- Can provide [biological insights]{style="color:green"}
+\- Can provide [biological insights]{style="color:blue"}
 
-\- Allow testing of [intervention scenarios]{style="color:green"}
+\- Allow testing of [intervention scenarios]{style="color:blue"}
 
 \- Can extrapolate beyond observed data
 
-\- Parameters often have [biological interpretation]{style="color:green"}
+\- Parameters often have [biological interpretation]{style="color:blue"}
 :::
 
 ::: {.column width="50%"}
@@ -96,13 +96,13 @@
 ::: {.column width="50%"}
 **Advantages:**
 
-\- [Simpler]{style="color:green"} to develop and implement
+\- [Simpler]{style="color:blue"} to develop and implement
 
-\- Good for [short-term predictions]{style="color:green"}
+\- Good for [short-term predictions]{style="color:blue"}
 
-\- Require [less detailed data]{style="color:green"}
+\- Require [less detailed data]{style="color:blue"}
 
-\- Computationally [efficient]{style="color:green"}
+\- Computationally [efficient]{style="color:blue"}
 :::
 
 ::: {.column width="50%"}
@@ -166,13 +166,13 @@ Think of a recent epidemic (e.g., COVID-19, Mpox, Ebola). Which type of model wo
 
 **Best for:**
 
-\- [Large populations]{style="color:green"} (\>10,000)
+\- [Large populations]{style="color:blue"} (\>10,000)
 
-\- Understanding [general trends]{style="color:green"}
+\- Understanding [general trends]{style="color:blue"}
 
-\- [Parameter estimation]{style="color:green"}
+\- [Parameter estimation]{style="color:blue"}
 
-\- When computational [efficiency]{style="color:green"} is important
+\- When computational [efficiency]{style="color:blue"} is important
 :::
 
 ::: {.column width="50%"}
@@ -180,13 +180,13 @@ Think of a recent epidemic (e.g., COVID-19, Mpox, Ebola). Which type of model wo
 
 **Best for:**
 
-\- [Small populations]{style="color:green"} (\<1,000)
+\- [Small populations]{style="color:blue"} (\<1,000)
 
-\- [Early epidemic phases]{style="color:green"}
+\- [Early epidemic phases]{style="color:blue"}
 
-\- [Uncertainty quantification]{style="color:green"}
+\- [Uncertainty quantification]{style="color:blue"}
 
-\- [Extinction events]{style="color:green"}
+\- [Extinction events]{style="color:blue"}
 :::
 :::::
 
@@ -405,10 +405,10 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ### Network model advantages
 
-- Capture [realistic contact patterns]{style="color:green"}
-- Can model [targeted interventions]{style="color:green"} (e.g., contact tracing)
-- Account for [superspreading]{style="color:green"} events
-- Useful for [outbreak investigation]{style="color:green"}
+- Capture [realistic contact patterns]{style="color:blue"}
+- Can model [targeted interventions]{style="color:blue"} (e.g., contact tracing)
+- Account for [superspreading]{style="color:blue"} events
+- Useful for [outbreak investigation]{style="color:blue"}
 
 ------------------------------------------------------------------------
 

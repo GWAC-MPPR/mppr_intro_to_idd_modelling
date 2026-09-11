@@ -359,7 +359,7 @@ $$
 R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}}{\text{Time}} \times \dfrac{\text{Time}}{\text{Infection}}
 $$
 
-- $R0$ is unitless and dimensionless.
+- $R0$ is [unitless and dimensionless]{style="color:tomato"}.
 
 ------------------------------------------------------------------------
 
@@ -367,7 +367,7 @@ $$
 
 - Numerical simulations can be performed with any programming language.
 
-- This course focuses on the R programming language because:
+- This course focuses on the [R programming language]{style="color:tomato"} because:
 
   - It is a popular language for data analysis and statistical computing.
   - It has a rich ecosystem of packages for solving differential equations.
