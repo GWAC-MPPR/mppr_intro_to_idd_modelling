@@ -85,13 +85,13 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 ### Non-pharmaceutical interventions (NPIs) {#sec-npi}
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="35%"}
 ![](images/mask.jpeg){width="70%"}
 
 ![](images/screening.jpeg){width="70%"}
 :::
 
-::: {.column width="50%"}
+::: {.column width="65%"}
 - Non-pharmaceutical interventions are measures that [do not]{style="color:tomato"} involve medical interventions.
 
 - Examples:

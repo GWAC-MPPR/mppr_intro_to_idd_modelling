@@ -427,7 +427,7 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ### The modelling for decision-making process
 
-![Source: [Heesterbeek et al, 2015](https://doi.org/10.1126/science.aaa4339)](images/modelling_process.png){width=70%}
+![Source: [Heesterbeek et al, 2015](https://doi.org/10.1126/science.aaa4339)](images/modelling_process.png){width="50%"}
 
 ------------------------------------------------------------------------
 
