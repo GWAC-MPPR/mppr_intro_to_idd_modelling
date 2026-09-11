@@ -249,7 +249,8 @@ James Mba Azam, PhD <a href="https://orcid.org/0000-0001-5782-7330" class="quart
 <li><a href="#/types-of-infectious-disease-models" id="/toc-types-of-infectious-disease-models">Types of infectious disease models</a></li>
 <li><a href="#/introduction-to-compartmental-models" id="/toc-introduction-to-compartmental-models">Introduction to compartmental models</a></li>
 <li><a href="#/modelling-epidemic-control" id="/toc-modelling-epidemic-control">Modelling epidemic control</a></li>
-<li><a href="#/brief-notes-on-modelling-host-heterogeneity" id="/toc-brief-notes-on-modelling-host-heterogeneity">Brief notes on modelling host heterogeneity</a></li>
+<li><a href="#/brief-overview-of-modelling-host-heterogeneity" id="/toc-brief-overview-of-modelling-host-heterogeneity">Brief overview of modelling host heterogeneity</a></li>
+<li><a href="#/stochasticity-in-sir-models" id="/toc-stochasticity-in-sir-models">Stochasticity in SIR models</a></li>
 <li><a href="#/final-remarks" id="/toc-final-remarks">Final Remarks</a></li>
 <li><a href="#/list-of-resources" id="/toc-list-of-resources">List of Resources</a></li>
 <li><a href="#/references" id="/toc-references">References</a></li>
@@ -1165,8 +1166,8 @@ James Mba Azam, PhD <a href="https://orcid.org/0000-0001-5782-7330" class="quart
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/infection_timeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Infection timeline illustrating how a pathogen in a host interacts with the host’s immune system (Source: Modelling Infectious Diseases of Humans and Animals)"><img data-src="images/infection_timeline.png" alt="Infection timeline illustrating how a pathogen in a host interacts with the host’s immune system (Source: Modelling Infectious Diseases of Humans and Animals)"></a></p>
-<figcaption>Infection timeline illustrating how a pathogen in a host interacts with the host’s immune system (Source: Modelling Infectious Diseases of Humans and Animals)</figcaption>
+<p><a href="images/infection_timeline.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Pathogen load and immune response after infection. Schematic after @keeling2008modeling."><img data-src="images/infection_timeline.svg" alt="Pathogen load and immune response after infection. Schematic after Keeling and Rohani (2008)."></a></p>
+<figcaption>Pathogen load and immune response after infection. Schematic after <span class="citation" data-cites="keeling2008modeling">Keeling and Rohani (<a href="#/references" role="doc-biblioref" onclick="">2008</a>)</span>.</figcaption>
 </figure>
 </div>
 </div></div>
@@ -1746,8 +1747,8 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <h2>The Susceptible-Exposed-Infected-Recovered (SEIR) Model</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/infection_timeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Timeline of infection. Source: Keeling &amp; Rohani, 2008"><img data-src="images/infection_timeline.png" alt="Timeline of infection. Source: Keeling &amp; Rohani, 2008"></a></p>
-<figcaption>Timeline of infection. Source: Keeling &amp; Rohani, 2008</figcaption>
+<p><a href="images/infection_timeline.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Timeline of infection. Schematic after @keeling2008modeling."><img data-src="images/infection_timeline.svg" alt="Timeline of infection. Schematic after Keeling and Rohani (2008)."></a></p>
+<figcaption>Timeline of infection. Schematic after <span class="citation" data-cites="keeling2008modeling">Keeling and Rohani (<a href="#/references" role="doc-biblioref" onclick="">2008</a>)</span>.</figcaption>
 </figure>
 </div>
 </section>
@@ -2149,8 +2150,8 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 </div>
 </section></section>
 <section>
-<section id="brief-notes-on-modelling-host-heterogeneity" class="title-slide slide level1 center">
-<h1>Brief notes on modelling host heterogeneity</h1>
+<section id="brief-overview-of-modelling-host-heterogeneity" class="title-slide slide level1 center">
+<h1>Brief overview of modelling host heterogeneity</h1>
 <ul>
 <li><p>The models we have discussed so far <span style="color:tomato">assume that all individuals in the population are identical</span>.</p></li>
 <li><p>However, <span style="color:tomato">in reality, individuals differ</span> in their susceptibility to infection and their ability to transmit the disease.</p></li>
@@ -2215,6 +2216,267 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="fragment" style="font-size: 450%">
 <p>Any Questions?</p>
 </div>
+</section></section>
+<section>
+<section id="stochasticity-in-sir-models" class="title-slide slide level1 center">
+<h1>Stochasticity in SIR models</h1>
+
+</section>
+<section id="incorporating-stochasticity" class="slide level2">
+<h2>Incorporating stochasticity</h2>
+<ul>
+<li>The models so far are <span style="color:tomato">deterministic</span>: given the same inputs, they always produce <span style="color:tomato">exactly the same trajectory</span>.</li>
+<li>If we could “re-run” a real epidemic, we would <span style="color:tomato">not</span> see the same people infected at the same times.</li>
+<li>There is an important element of <span style="color:tomato">chance</span> in who meets whom, who gets infected, and who recovers when.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/stochastic/det_vs_stoch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="images/stochastic/det_vs_stoch.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="when-does-chance-matter-most">When does chance matter most?</h3>
+<p>Chance matters most when the <span style="color:tomato">number of infectious individuals is small</span>:</p>
+<ul>
+<li><span style="color:blue">Small populations</span> (villages, hospital wards, schools, herds)</li>
+<li><span style="color:blue">Early in an invasion</span>: a handful of imported cases</li>
+<li><span style="color:blue">After successful control</span>: driving cases towards zero</li>
+<li><span style="color:blue">Troughs</span> between epidemic waves</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Discussion</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Think of an outbreak you have worked on or read about. At which point would a deterministic SIR model have been <span style="color:blue">misleading</span>?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="three-ways-to-add-stochasticity-to-a-model" class="slide level2">
+<h2>Three ways to add stochasticity to a model</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 47%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Approach</th>
+<th style="text-align: left;">Idea</th>
+<th style="text-align: left;">Best when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style="color:tomato">Observational noise</span></td>
+<td style="text-align: left;">Dynamics stay deterministic; only the <em>reported</em> data are noisy</td>
+<td style="text-align: left;">Interpreting case data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="color:tomato">Process noise</span></td>
+<td style="text-align: left;">Add a random term to the ODEs (a <em>stochastic differential equation</em>)</td>
+<td style="text-align: left;">Populations are large</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="color:tomato">Event-driven</span></td>
+<td style="text-align: left;">Count whole people; each infection and recovery is a <span style="color:blue">random event</span></td>
+<td style="text-align: left;">Numbers are small</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Observational noise <span style="color:tomato">does not change the dynamics</span>; the true number of cases still follows the deterministic model.</li>
+<li>Process noise is computationally cheap, but does <span style="color:tomato">not respect the discrete nature of individuals</span>.</li>
+<li>Event-driven models are the <span style="color:tomato">most popular</span> because they are mechanistic, individual-based, and are the natural way to capture <span style="color:blue">extinction</span>.</li>
+</ul>
+</section>
+<section id="event-driven-stochastic-sir" class="slide level2">
+<h2>Event-driven stochastic SIR</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, <span class="math inline">\(R\)</span> are now <span style="color:tomato">integers</span> (whole people).</li>
+<li>The ODE terms become <span style="color:tomato">event rates</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
+</figure>
+</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Event</th>
+<th style="text-align: left;">Rate</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style="color:blue">Infection</span></td>
+<td style="text-align: left;"><span class="math inline">\(\beta S I\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(S \to S - 1,\; I \to I + 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="color:blue">Recovery</span></td>
+<td style="text-align: left;"><span class="math inline">\(\gamma I\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(I \to I - 1,\; R \to R + 1\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>In a closed SIR model, these are the <span style="color:tomato">only two events</span> that can happen.</li>
+<li>With births and deaths, we would add <span style="color:blue">four more</span> (birth into <span class="math inline">\(S\)</span>; death from <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, or <span class="math inline">\(R\)</span>), each with its own rate.</li>
+<li>The rates tell us <span style="color:tomato">how often</span> each event happens on average; chance decides <span style="color:tomato">exactly when</span> and <span style="color:tomato">which one</span>.</li>
+</ul>
+</section>
+<section id="simulating-one-event-at-a-time-gillespies-direct-method" class="slide level2">
+<h2>Simulating one event at a time: Gillespie’s direct method</h2>
+<ul>
+<li>Proposed by <span class="citation" data-cites="gillespie1977exact">Gillespie (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span> for chemical reactions; it is an <span style="color:tomato">exact</span> simulation of the continuous-time stochastic process whose average behaviour is the ODE.</li>
+</ul>
+</section>
+<section class="slide level2 scrollable">
+
+<ol type="1">
+<li>Compute the rates of all events: <span class="math inline">\(r_{\text{inf}} = \beta S I\)</span>, <span class="math inline">\(r_{\text{rec}} = \gamma I\)</span>, and their sum <span class="math inline">\(R_{\text{total}} = r_{\text{inf}} + r_{\text{rec}}\)</span>.</li>
+<li>Draw the <span style="color:tomato">time to the next event</span>: <span class="math inline">\(\delta t \sim \text{Exponential}(R_{\text{total}})\)</span>, i.e.&nbsp;<span class="math inline">\(\delta t = -\log(u_1)/R_{\text{total}}\)</span> with <span class="math inline">\(u_1 \sim \text{Uniform}(0, 1)\)</span>.</li>
+<li>Draw <span style="color:tomato">which event</span> happens: infection with probability <span class="math inline">\(r_{\text{inf}} / R_{\text{total}}\)</span>, otherwise recovery.</li>
+<li>Update <span class="math inline">\(t \to t + \delta t\)</span> and the compartments; repeat until <span class="math inline">\(I = 0\)</span> or <span class="math inline">\(t &gt; t_{\max}\)</span>.</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/stochastic/gillespie_schematic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="images/stochastic/gillespie_schematic.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="why-an-exponential-waiting-time">Why an exponential waiting time?</h3>
+<ul>
+<li>If events happen at a constant rate <span class="math inline">\(R_{\text{total}}\)</span>, the number of events in a short interval is <span style="color:tomato">Poisson</span> distributed.</li>
+<li>The <span style="color:tomato">waiting time</span> until the next Poisson event is <span style="color:tomato">exponentially distributed</span> with mean <span class="math inline">\(1/R_{\text{total}}\)</span>.</li>
+<li>The exponential distribution is <span style="color:blue">memoryless</span>: how long we have already waited tells us nothing about how much longer to wait.
+<ul>
+<li>This is the same assumption we made in the ODE: each infectious individual recovers at a constant rate <span class="math inline">\(\gamma\)</span>, regardless of how long they have been infectious.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="the-algorithm-in-r">The algorithm in R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="cf">while</span> (I <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> t <span class="sc">&lt;</span> t_max) {</span>
+<span id="cb6-2"><a href=""></a>  rate_inf   <span class="ot">&lt;-</span> beta <span class="sc">*</span> S <span class="sc">*</span> I</span>
+<span id="cb6-3"><a href=""></a>  rate_rec   <span class="ot">&lt;-</span> gamma <span class="sc">*</span> I</span>
+<span id="cb6-4"><a href=""></a>  rate_total <span class="ot">&lt;-</span> rate_inf <span class="sc">+</span> rate_rec</span>
+<span id="cb6-5"><a href=""></a>  dt <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1</span>, <span class="at">rate =</span> rate_total)  <span class="co"># time to next event</span></span>
+<span id="cb6-6"><a href=""></a>  <span class="cf">if</span> (<span class="fu">runif</span>(<span class="dv">1</span>) <span class="sc">&lt;</span> rate_inf <span class="sc">/</span> rate_total) {  <span class="co"># which event?</span></span>
+<span id="cb6-7"><a href=""></a>    S <span class="ot">&lt;-</span> S <span class="sc">-</span> <span class="dv">1</span>; I <span class="ot">&lt;-</span> I <span class="sc">+</span> <span class="dv">1</span>  <span class="co"># infection</span></span>
+<span id="cb6-8"><a href=""></a>  } <span class="cf">else</span> {</span>
+<span id="cb6-9"><a href=""></a>    I <span class="ot">&lt;-</span> I <span class="sc">-</span> <span class="dv">1</span>; R <span class="ot">&lt;-</span> R <span class="sc">+</span> <span class="dv">1</span>  <span class="co"># recovery</span></span>
+<span id="cb6-10"><a href=""></a>  }</span>
+<span id="cb6-11"><a href=""></a>  t <span class="ot">&lt;-</span> t <span class="sc">+</span> dt</span>
+<span id="cb6-12"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Store <span class="math inline">\(t\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, <span class="math inline">\(R\)</span> after every event and you have one simulated epidemic.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="alternatives-you-will-come-across">Alternatives you will come across</h3>
+<ul>
+<li><span style="color:tomato">First-reaction method</span>: draw a waiting time for <span style="color:blue">every</span> event and take the earliest. Easier to explain, mathematically equivalent, but <span style="color:blue">slower</span>.</li>
+<li><span style="color:tomato"><span class="math inline">\(\tau\)</span>-leap method</span>: fix a small time step <span class="math inline">\(\delta t\)</span> and draw the <span style="color:blue">number</span> of infections and recoveries in that step from a Poisson distribution, e.g.&nbsp;<code>rpois(1, beta * S * I * dt)</code>.
+<ul>
+<li>Much <span style="color:blue">faster</span> for large populations, but only <span style="color:blue">approximate</span>: the step must be small enough that the rates barely change within it.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>The number of events, and hence the run time, of Gillespie’s method <span style="color:tomato">grows with the population size</span>. For <span class="math inline">\(N\)</span> in the millions, use <span class="math inline">\(\tau\)</span>-leaping.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="one-run-is-not-enough" class="slide level2">
+<h2>One run is not enough</h2>
+<ul>
+<li>Each run is <span style="color:tomato">one possible epidemic</span>. To say anything general we must run the model <span style="color:tomato">many times</span> and summarise.</li>
+<li>Useful summaries:
+<ul>
+<li>The <span style="color:blue">mean</span> trajectory (and how it compares with the ODE)</li>
+<li><span style="color:blue">Prediction intervals</span>: e.g.&nbsp;the 2.5% and 97.5% quantiles of <span class="math inline">\(I(t)\)</span> across runs</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Useful summaries:
+<ul>
+<li>The distribution of the <span style="color:blue">peak size</span>, <span style="color:blue">peak timing</span>, and <span style="color:blue">final size</span></li>
+<li>The <span style="color:blue">probability</span> of an event of interest, e.g.&nbsp;that the epidemic dies out</li>
+</ul></li>
+</ul>
+</section>
+<section id="summary-1" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li>Deterministic models describe the <span style="color:tomato">average</span> epidemic; stochastic models describe the <span style="color:tomato">range</span> of possible epidemics.</li>
+<li>Chance matters most when <span style="color:tomato">numbers are small</span>: early in an outbreak, in small populations, and near elimination.</li>
+<li>The simplest stochastic SIR treats each infection and recovery as a <span style="color:tomato">random event</span> with the rate given by the ODE; <span style="color:tomato">Gillespie’s algorithm</span> simulates it exactly.</li>
+<li>Always run <span style="color:tomato">many simulations</span> and summarise.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="r-practicals-4">R Practicals</h4>
+<ul>
+<li>Let’s open the Quarto script <a href="https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals"><code>sir_stochastic.qmd</code></a> and follow along.</li>
+<li>Download the file <code>Day 3 R practicals pack</code> from Moodle or clone it from GitHub using the following command in your terminal</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href=""></a><span class="fu">git</span> clone <span class="dt">\</span></span>
+<span id="cb7-2"><a href=""></a>https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -2271,7 +2533,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <h2>What skills are needed to build and use infectious disease models?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/modelling_skills.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="A non-exhaustive list of skills needed for modelling infectious diseases."><img data-src="images/modelling_skills.jpeg" alt="A non-exhaustive list of skills needed for modelling infectious diseases."></a></p>
+<p><a href="images/modelling_skills.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="A non-exhaustive list of skills needed for modelling infectious diseases."><img data-src="images/modelling_skills.jpeg" alt="A non-exhaustive list of skills needed for modelling infectious diseases."></a></p>
 <figcaption>A non-exhaustive list of skills needed for modelling infectious diseases.</figcaption>
 </figure>
 </div>
@@ -2303,7 +2565,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Anderson_and_May.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"><img data-src="images/Anderson_and_May.jpeg" style="width:60.0%" alt="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"></a></p>
+<p><a href="images/Anderson_and_May.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"><img data-src="images/Anderson_and_May.jpeg" style="width:60.0%" alt="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"></a></p>
 <figcaption>Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May</figcaption>
 </figure>
 </div>
@@ -2311,7 +2573,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/ID_modelling_Vynnycky_and_White.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Infectious Disease Modelling by Emilia Vynnycky and Richard White"><img data-src="images/ID_modelling_Vynnycky_and_White.jpeg" style="width:60.0%" alt="Infectious Disease Modelling by Emilia Vynnycky and Richard White"></a></p>
+<p><a href="images/ID_modelling_Vynnycky_and_White.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Infectious Disease Modelling by Emilia Vynnycky and Richard White"><img data-src="images/ID_modelling_Vynnycky_and_White.jpeg" style="width:60.0%" alt="Infectious Disease Modelling by Emilia Vynnycky and Richard White"></a></p>
 <figcaption>Infectious Disease Modelling by Emilia Vynnycky and Richard White</figcaption>
 </figure>
 </div>
@@ -2326,7 +2588,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Rohani_and_Keeling.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"><img data-src="images/Rohani_and_Keeling.jpeg" style="width:60.0%" alt="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"></a></p>
+<p><a href="images/Rohani_and_Keeling.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"><img data-src="images/Rohani_and_Keeling.jpeg" style="width:60.0%" alt="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"></a></p>
 <figcaption>Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani</figcaption>
 </figure>
 </div>
@@ -2334,7 +2596,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Epidemics_Ottar.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Epidemics: Models and Data Using R by Ottar N. Bjornstad"><img data-src="images/Epidemics_Ottar.jpg" style="width:60.0%" alt="Epidemics: Models and Data Using R by Ottar N. Bjornstad"></a></p>
+<p><a href="images/Epidemics_Ottar.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Epidemics: Models and Data Using R by Ottar N. Bjornstad"><img data-src="images/Epidemics_Ottar.jpg" style="width:60.0%" alt="Epidemics: Models and Data Using R by Ottar N. Bjornstad"></a></p>
 <figcaption>Epidemics: Models and Data Using R by Ottar N. Bjornstad</figcaption>
 </figure>
 </div>
@@ -2419,6 +2681,12 @@ Begon, Michael, Malcolm Bennett, Roger G Bowers, Nigel P French, SM Hazel, and J
 </div>
 <div id="ref-Box1979" class="csl-entry" role="listitem">
 Box, GE. 1979. <span>“All Models Are Wrong, but Some Are Useful.”</span> <em>Robustness in Statistics</em> 202 (1979): 549.
+</div>
+<div id="ref-gillespie1977exact" class="csl-entry" role="listitem">
+Gillespie, Daniel T. 1977. <span>“Exact Stochastic Simulation of Coupled Chemical Reactions.”</span> <em>The Journal of Physical Chemistry</em> 81 (25): 2340–61. <a href="https://doi.org/10.1021/j100540a008">https://doi.org/10.1021/j100540a008</a>.
+</div>
+<div id="ref-keeling2008modeling" class="csl-entry" role="listitem">
+Keeling, Matt J., and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press. <a href="https://doi.org/10.1515/9781400841035">https://doi.org/10.1515/9781400841035</a>.
 </div>
 <div id="ref-kermack1927contribution" class="csl-entry" role="listitem">
 Kermack, William Ogilvy, and Anderson G McKendrick. 1927. <span>“A Contribution to the Mathematical Theory of Epidemics.”</span> <em>Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character</em> 115 (772): 700–721.
