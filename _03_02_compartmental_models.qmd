@@ -26,7 +26,13 @@ Compartmental models are different from statistical models, which are used to de
 :::
 
 ::: {.column width="40%"}
-![Infection timeline illustrating how a pathogen in a host interacts with the host's immune system (Source: Modelling Infectious Diseases of Humans and Animals)](images/infection_timeline.png)
+::: {.content-visible unless-format="pdf"}
+![Pathogen load and immune response after infection. Schematic after @keeling2008modeling.](images/infection_timeline.svg)
+:::
+
+::: {.content-visible when-format="pdf"}
+![Pathogen load and immune response after infection. Schematic after @keeling2008modeling.](images/infection_timeline.pdf)
+:::
 :::
 :::::
 

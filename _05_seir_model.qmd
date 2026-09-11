@@ -1,4 +1,10 @@
-![Timeline of infection. Source: Keeling & Rohani, 2008](images/infection_timeline.png)
+::: {.content-visible unless-format="pdf"}
+![Timeline of infection. Schematic after @keeling2008modeling.](images/infection_timeline.svg)
+:::
+
+::: {.content-visible when-format="pdf"}
+![Timeline of infection. Schematic after @keeling2008modeling.](images/infection_timeline.pdf)
+:::
 
 ------------------------------------------------------------------------
 
