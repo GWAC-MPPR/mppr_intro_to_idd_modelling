@@ -275,10 +275,10 @@ The $R$ compartment is an absorbing state in this model.
   - Numerical simulations.
 
 ::: callout-note
-- For this introductory course, we will use focus on simulation.
+- For this introductory course, we will focus on simulation.
 :::
 
-- But first, let's do some qualitative analysis of the SIR.
+- But first, let's do some qualitative analysis of the SIR model.
 
 ------------------------------------------------------------------------
 

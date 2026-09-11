@@ -68,7 +68,7 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 - Take time to develop for new pathogens
 - Never 100% effective and limited duration of protection
 - Adverse side effects
-- Some individuals cannot be vaccinated or refuce vaccination
+- Some individuals cannot be vaccinated or refuse vaccination
 - Some pathogens mutate rapidly (e.g., influenza virus)
 - Logistical challenges (e.g., cold chain requirements)
 

@@ -27,12 +27,12 @@
 ::: {.callout-caution collapse="true" icon="false"}
 ### Discussion
 
-- What makes models "wrong" by definition?:
+- What makes models "wrong" by definition?
 :::
 
 ------------------------------------------------------------------------
 
-- What makes models "wrong" by definition?:
+- What makes models "wrong" by definition?
   - Models simplify reality
   - They cannot fully capture all the complexities of the system being studied.
 
@@ -40,7 +40,7 @@
 
 ## Factors that influence model formulation/choice
 
-- [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model to reproduce observed data and predict future outcomes?
+- [Accuracy]{style="color:tomato; font-weight:bold;"}: how well does the model reproduce observed data and predict future outcomes?
 - [Transparency]{style="color:tomato; font-weight:bold;"}: is it easy to understand and interpret the model and its outputs?
   - This is affected by the model's complexity
 - [Flexibility]{style="color:tomato; font-weight:bold;"}: the ability of the model to be adapted to different scenarios.
@@ -107,7 +107,7 @@ How are these two uses impacted by accuracy, transparency, and flexibility? That
 ## Summary
 
 - Models:
-  - Simplify reality and allow us to understand complex systems.\
+  - Simplify reality and allow us to understand complex systems.
   - [Simplifications of reality]{style="color:tomato"} and do not capture all the [complexities]{style="color:tomato"} of the system being studied.
   - Only as good as the [data]{style="color:tomato"} used to calibrate them.
   - Sensitive to the [assumptions]{style="color:tomato"} made during their formulation.

@@ -2,7 +2,7 @@
 
 - Compartmental models:
   - divide populations into compartments (or groups) based on the individual's infection status and track them through time [@Blackwood2018a].
-  - are mechanistic, meaning they describe processes such the interaction between hosts, biological processes of pathogen, host immune response, and so forth.
+  - are mechanistic, meaning they describe processes such as the interaction between hosts, biological processes of pathogen, host immune response, and so forth.
 
 ------------------------------------------------------------------------
 

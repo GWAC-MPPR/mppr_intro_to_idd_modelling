@@ -70,7 +70,7 @@
 
 \- Allow testing of [intervention scenarios]{style="color:green"}
 
-\-   Can extrapolate beyond observed data
+\- Can extrapolate beyond observed data
 
 \- Parameters often have [biological interpretation]{style="color:green"}
 :::
@@ -329,7 +329,7 @@ $$\frac{dS}{dt} = -\beta S I$$
 - [**Metapopulation models**]{style="color:tomato"}:
   - Discrete patches connected by migration
   - Good for cities/regions connected by travel
-    
+
 ------------------------------------------------------------------------
 
 - [**Network models**]{style="color:tomato"}:
@@ -425,7 +425,7 @@ $$\frac{dS}{dt} = -\beta S I$$
   - Individual characteristics
   - Behavioral rules
   - Interaction patterns
-    
+
 ------------------------------------------------------------------------
 
 ## Agent-based models (ABMs)
