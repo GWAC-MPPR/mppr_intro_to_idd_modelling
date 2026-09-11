@@ -74,6 +74,14 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 ------------------------------------------------------------------------
 
+::: {.callout-caution collapse="true" icon="false"}
+### Discussion
+
+- Can you think of some challenges with the other pharmaceutical interventions (antivirals and antibiotics)?
+:::
+
+------------------------------------------------------------------------
+
 ### Non-pharmaceutical interventions (NPIs) {#sec-npi}
 
 ::::: columns

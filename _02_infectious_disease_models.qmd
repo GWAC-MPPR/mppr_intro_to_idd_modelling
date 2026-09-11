@@ -89,6 +89,14 @@ That is, which of these factors is more important for each use case?
 
 ------------------------------------------------------------------------
 
+::: {.callout-important icon="false"}
+### Discussion
+
+Given what you've learned so far, what do you think are some [limitations]{style="color:blue"} of infectious disease models?
+:::
+
+------------------------------------------------------------------------
+
 ## Limitations of infectious disease models
 
 - Host [behaviour]{style="color:blue"} is often [difficult to predict]{style="color:blue"}.
