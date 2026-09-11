@@ -67,6 +67,10 @@ editor_options:
 
 {{< include _07_heterogeneities.qmd >}}
 
+# Stochasticity in SIR models
+
+{{< include _08_stochasticity.qmd >}}
+
 ------------------------------------------------------------------------
 
 # Final Remarks
