@@ -41,3 +41,9 @@ In the last two days, we have covered a lot of ground. Here are some key takeawa
 -   Age structure is a common form of heterogeneity that can be incorporated into the models.
 
 -   Other forms of heterogeneity include spatial, temporal, and contact heterogeneity.
+
+------------------------------------------------------------------------
+
+-   Deterministic models describe the average epidemic; stochastic models describe the range of possible epidemics, which matters most when the number of infected individuals is small.
+
+-   The simplest stochastic SIR model treats each infection and recovery as a random event with the rate given by the ODE. Simulated many times, it shows that an outbreak started by a single case can die out by chance.
