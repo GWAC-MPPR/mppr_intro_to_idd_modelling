@@ -351,8 +351,13 @@ $$
 
 #### Practicals
 
-- Let's do a code walk through in R using the script [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
-  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Let's do a code walk through in R using the Quarto script [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals).
+- Download the file `Day 2 R practicals pack` from Moodle or clone it from GitHub using the following command in your terminal
+
+``` bash
+git clone \
+https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
+```
 
 ------------------------------------------------------------------------
 

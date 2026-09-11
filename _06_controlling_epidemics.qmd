@@ -107,8 +107,14 @@ where $\eta$ is the rate of vaccination.
 
 - We can use the same approach as the SIR and SEIR models to simulate the SEIRV model.
 
-- Modify the `seir_bd.qmd` script to simulate the SEIRV model.
-  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Modify the `sir.qmd` script to simulate the SEIRV model.
+
+- Download the file `Day 2 R practicals pack` from Moodle or clone it from GitHub using the following command in your terminal
+
+``` bash
+git clone \
+https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
+```
 
 ------------------------------------------------------------------------
 
@@ -171,7 +177,12 @@ The modified SIR model with a reduced transmission rate is as follows:
 #### R Practicals
 
 - Let's open the script file `sir_npi.qmd` and follow along.
-  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Download the file `Day 2 R practicals pack` from Moodle or clone it from GitHub using the following command in your terminal
+
+``` bash
+git clone \
+https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
+```
 
 ------------------------------------------------------------------------
 
@@ -216,7 +227,12 @@ where $\delta$ is the rate at which infected individuals move to the isolated co
 
 - We can use the same approach as the SIR model to simulate the model with isolation.
 - Modify the SIR model in [`sir.qmd`](https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/tree/main/model_implementation_practicals) to incorporate the isolated compartment, $Q$ and the relevant parameters.
-  - Link: https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals/
+- Download the file `Day 2 R practicals pack` from Moodle or clone it from GitHub using the following command in your terminal
+
+``` bash
+git clone \
+https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
+```
 
 ------------------------------------------------------------------------
 
