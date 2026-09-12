@@ -38,6 +38,18 @@
 
 ------------------------------------------------------------------------
 
+::::: columns
+::: {.column width="55%"}
+::: {.content-visible unless-format="pdf"}
+![](images/age_structured_sir.svg){width="100%"}
+:::
+
+::: {.content-visible when-format="pdf"}
+![](images/age_structured_sir.pdf){width="100%"}
+:::
+:::
+
+::: {.column width="45%"}
 - The (compact) model equations are as follows:
 
 \begin{align*}
@@ -45,6 +57,8 @@
 \dfrac{dI_i}{dt} &= \sum_{j=1}^{n} \beta_{ji} S_i I_j - \gamma I_i \\
 \dfrac{dR_i}{dt} &= \gamma I_i
 \end{align*}
+:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -76,6 +90,17 @@ $$
 ::::: columns
 ::: {.column width="55%"}
 - Contact rates come from [contact surveys]{style="color:tomato"}: participants record who they met in a day, and their ages, e.g. POLYMOD [@mossong2008social]. The `socialmixr` R package provides many such surveys.
+:::
+
+::: {.column width="45%"}
+![Illustrative contact matrix; darker means more contacts per day.](images/contact_matrix.png)
+:::
+:::::
+
+------------------------------------------------------------------------
+
+::::: columns
+::: {.column width="55%"}
 - Mixing is [assortative]{style="color:tomato"}: most contacts are with people of a [similar age]{style="color:blue"}, plus a [parent--child]{style="color:blue"} band.
 - Contacts are [reciprocal]{style="color:tomato"}: $c_{ji} N_i = c_{ij} N_j$, so the matrix is not free to take any shape.
 :::
