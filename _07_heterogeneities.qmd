@@ -28,6 +28,16 @@
 
 ------------------------------------------------------------------------
 
+::: {.content-visible unless-format="pdf"}
+![](images/age_structured_sir.svg){width="95%" fig-align="center"}
+:::
+
+::: {.content-visible when-format="pdf"}
+![](images/age_structured_sir.pdf){width="95%" fig-align="center"}
+:::
+
+------------------------------------------------------------------------
+
 - The (compact) model equations are as follows:
 
 \begin{align*}
