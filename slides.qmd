@@ -35,6 +35,34 @@ editor_options:
   chunk_output_type: console
 ---
 
+## Schedule
+
+::::: columns
+::: {.column width="50%"}
+### Day 1
+
+- An overview of infectious diseases
+- Infectious disease models
+- Types of infectious disease models
+- Introduction to compartmental models
+  - The SIR model
+  - The SEIR model
+- R practicals: simulating the SIR and SEIR models
+:::
+
+::: {.column width="50%"}
+### Day 2
+
+- Modelling epidemic control
+  - Vaccination
+  - Non-pharmaceutical interventions
+- Brief overview of modelling host heterogeneity
+- Stochasticity in SIR models
+- R practicals: control measures and stochastic simulation
+- Final remarks
+:::
+:::::
+
 # An overview of infectious diseases
 
 {{< include _01_infectious_diseases_overview.qmd >}}
