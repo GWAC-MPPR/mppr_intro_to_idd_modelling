@@ -210,14 +210,37 @@ https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
 
 ------------------------------------------------------------------------
 
-The modified SIR model with isolated is as follows:
+::: {.callout-caution collapse="true" icon="false"}
+#### Discussion
 
+- Sketch the model diagram for the SIR model with an isolated compartment, $Q$. Which arrows leave $I$, and where do individuals go when they leave $Q$?
+- Now write down the model equations. Assume isolated individuals recover at a rate $\tau$.
+:::
+
+------------------------------------------------------------------------
+
+The modified SIR model with isolation is as follows:
+
+::::: columns
+::: {.column width="50%"}
+::: {.content-visible unless-format="pdf"}
+![](images/siqr_model.svg){width="100%"}
+:::
+
+::: {.content-visible when-format="pdf"}
+![](images/siqr_model.pdf){width="100%"}
+:::
+:::
+
+::: {.column width="50%"}
 \begin{align*}
 \frac{dS}{dt} & = -\beta S I \\
 \frac{dI}{dt} & = \beta S I - \gamma I - \delta I \\
 \frac{dR}{dt} & = \gamma I + \tau Q \\
 \frac{dQ}{dt} & = \delta I - \tau Q
 \end{align*}
+:::
+:::::
 
 where $\delta$ is the rate at which infected individuals move to the isolated compartment, and $\tau$ is the rate at which individuals recover from isolation.
 
