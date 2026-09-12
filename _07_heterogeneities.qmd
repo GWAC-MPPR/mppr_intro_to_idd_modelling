@@ -48,6 +48,45 @@
 
 ------------------------------------------------------------------------
 
+### What is $\beta_{ji}$?
+
+- [$\beta_{ji}$]{style="color:tomato"} is the rate at which [one infectious individual in group $j$]{style="color:tomato"} infects [a susceptible in group $i$]{style="color:tomato"}.
+- As in the SIR model, it is a product of [contacts]{style="color:blue"} and [transmissibility]{style="color:blue"}: $\beta_{ji} = c_{ji} \times v$, where $c_{ji}$ is the rate at which individuals in $i$ come into contact with individuals in $j$, and $v$ is the probability of transmission per contact ($v$ can also vary by age).
+- The force of infection on group $i$ adds up the contributions of [every]{style="color:tomato"} infectious group: $\lambda_i = \sum_{j=1}^{n} \beta_{ji} I_j$.
+
+------------------------------------------------------------------------
+
+- For $n = 2$ age groups, written out in full:
+
+$$
+\begin{pmatrix} \lambda_1 \\ \lambda_2 \end{pmatrix}
+=
+\begin{pmatrix} \beta_{11} & \beta_{21} \\ \beta_{12} & \beta_{22} \end{pmatrix}
+\begin{pmatrix} I_1 \\ I_2 \end{pmatrix}
+$$
+
+- The $n \times n$ matrix of $\beta_{ji}$ is called the [who-acquires-infection-from-whom (WAIFW) matrix]{style="color:tomato"}.
+- Its [diagonal]{style="color:blue"} is transmission within an age group; the [off-diagonal]{style="color:blue"} entries are transmission between age groups.
+- The homogeneous SIR model is the special case where all $\beta_{ji}$ are equal.
+
+------------------------------------------------------------------------
+
+### Where do the $\beta_{ji}$ come from?
+
+::::: columns
+::: {.column width="55%"}
+- Contact rates come from [contact surveys]{style="color:tomato"}: participants record who they met in a day, and their ages, e.g. POLYMOD [@mossong2008social]. The `socialmixr` R package provides many such surveys.
+- Mixing is [assortative]{style="color:tomato"}: most contacts are with people of a [similar age]{style="color:blue"}, plus a [parent--child]{style="color:blue"} band.
+- Contacts are [reciprocal]{style="color:tomato"}: $c_{ji} N_i = c_{ij} N_j$, so the matrix is not free to take any shape.
+:::
+
+::: {.column width="45%"}
+![Illustrative contact matrix; darker means more contacts per day.](images/contact_matrix.png)
+:::
+:::::
+
+------------------------------------------------------------------------
+
 - The model can be used to study the impact of age structure on the dynamics of the epidemic.
 
 - For example, we can study the impact of vaccinating different age groups on the dynamics of the epidemic.
