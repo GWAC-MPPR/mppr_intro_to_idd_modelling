@@ -11,3 +11,7 @@ format:
     institute: London School of Hygiene and Tropical Medicine, UK
     orcid: 0000-0001-5782-7330
     email: james.azam@lshtm.ac.uk
+    # Captions without "Figure N:" labels, matching the revealjs output
+    include-in-header:
+      text: |
+        \captionsetup{labelformat=empty}
