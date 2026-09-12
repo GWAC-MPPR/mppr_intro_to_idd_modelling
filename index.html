@@ -257,6 +257,37 @@ James Mba Azam, PhD <a href="https://orcid.org/0000-0001-5782-7330" class="quart
 </ul>
 </nav>
 </section>
+<section id="schedule" class="slide level2">
+<h2>Schedule</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="day-1">Day 1</h3>
+<ul>
+<li>An overview of infectious diseases</li>
+<li>Infectious disease models</li>
+<li>Types of infectious disease models</li>
+<li>Introduction to compartmental models
+<ul>
+<li>The SIR model</li>
+<li>The SEIR model</li>
+</ul></li>
+<li>R practicals: simulating the SIR and SEIR models</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="day-2">Day 2</h3>
+<ul>
+<li>Modelling epidemic control
+<ul>
+<li>Vaccination</li>
+<li>Non-pharmaceutical interventions</li>
+</ul></li>
+<li>Brief overview of modelling host heterogeneity</li>
+<li>Stochasticity in SIR models</li>
+<li>R practicals: control measures and stochastic simulation</li>
+<li>Final remarks</li>
+</ul>
+</div></div>
+</section>
 <section>
 <section id="an-overview-of-infectious-diseases" class="title-slide slide level1 center">
 <h1>An overview of infectious diseases</h1>
@@ -2123,13 +2154,34 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 </section>
 <section class="slide level2">
 
-<p>The modified SIR model with isolated is as follows:</p>
+<div class="callout callout-caution no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Discussion</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Sketch the model diagram for the SIR model with an isolated compartment, <span class="math inline">\(Q\)</span>. Which arrows leave <span class="math inline">\(I\)</span>, and where do individuals go when they leave <span class="math inline">\(Q\)</span>?</li>
+<li>Now write down the model equations. Assume isolated individuals recover at a rate <span class="math inline">\(\tau\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>The modified SIR model with isolation is as follows:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="images/siqr_model.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="images/siqr_model.svg" style="width:100.0%"></a></p>
+</div><div class="column" style="width:50%;">
 <p><span class="math display">\[\begin{align*}
 \frac{dS}{dt} &amp; = -\beta S I \\
 \frac{dI}{dt} &amp; = \beta S I - \gamma I - \delta I \\
 \frac{dR}{dt} &amp; = \gamma I + \tau Q \\
 \frac{dQ}{dt} &amp; = \delta I - \tau Q
 \end{align*}\]</span></p>
+</div></div>
 <p>where <span class="math inline">\(\delta\)</span> is the rate at which infected individuals move to the isolated compartment, and <span class="math inline">\(\tau\)</span> is the rate at which individuals recover from isolation.</p>
 </section>
 <section class="slide level2">
@@ -2183,6 +2235,18 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 </section>
 <section class="slide level2">
 
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/age_structured_sir.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="images/age_structured_sir.svg" class="quarto-figure quarto-figure-center" style="width:95.0%"></a></p>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><a href="images/age_structured_sir.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="images/age_structured_sir.svg" style="width:100.0%"></a></p>
+</div><div class="column" style="width:45%;">
 <ul>
 <li>The (compact) model equations are as follows:</li>
 </ul>
@@ -2191,6 +2255,67 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 \dfrac{dI_i}{dt} &amp;= \sum_{j=1}^{n} \beta_{ji} S_i I_j - \gamma I_i \\
 \dfrac{dR_i}{dt} &amp;= \gamma I_i
 \end{align*}\]</span></p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="what-is-beta_ji">What is <span class="math inline">\(\beta_{ji}\)</span>?</h3>
+<ul>
+<li><span style="color:tomato"><span class="math inline">\(\beta_{ji}\)</span></span> is the rate at which <span style="color:tomato">one infectious individual in group <span class="math inline">\(j\)</span></span> infects <span style="color:tomato">a susceptible in group <span class="math inline">\(i\)</span></span>.</li>
+<li>As in the SIR model, it is a product of <span style="color:blue">contacts</span> and <span style="color:blue">transmissibility</span>: <span class="math inline">\(\beta_{ji} = c_{ji} \times v\)</span>, where <span class="math inline">\(c_{ji}\)</span> is the rate at which individuals in <span class="math inline">\(i\)</span> come into contact with individuals in <span class="math inline">\(j\)</span>, and <span class="math inline">\(v\)</span> is the probability of transmission per contact (<span class="math inline">\(v\)</span> can also vary by age).</li>
+<li>The force of infection on group <span class="math inline">\(i\)</span> adds up the contributions of <span style="color:tomato">every</span> infectious group: <span class="math inline">\(\lambda_i = \sum_{j=1}^{n} \beta_{ji} I_j\)</span>.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>For <span class="math inline">\(n = 2\)</span> age groups, written out in full:</li>
+</ul>
+<p><span class="math display">\[
+\begin{pmatrix} \lambda_1 \\ \lambda_2 \end{pmatrix}
+=
+\begin{pmatrix} \beta_{11} &amp; \beta_{21} \\ \beta_{12} &amp; \beta_{22} \end{pmatrix}
+\begin{pmatrix} I_1 \\ I_2 \end{pmatrix}
+\]</span></p>
+<ul>
+<li>The <span class="math inline">\(n \times n\)</span> matrix of <span class="math inline">\(\beta_{ji}\)</span> is called the <span style="color:tomato">who-acquires-infection-from-whom (WAIFW) matrix</span>.</li>
+<li>Its <span style="color:blue">diagonal</span> is transmission within an age group; the <span style="color:blue">off-diagonal</span> entries are transmission between age groups.</li>
+<li>The homogeneous SIR model is the special case where all <span class="math inline">\(\beta_{ji}\)</span> are equal.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="where-do-the-beta_ji-come-from">Where do the <span class="math inline">\(\beta_{ji}\)</span> come from?</h3>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Contact rates come from <span style="color:tomato">contact surveys</span>: participants record who they met in a day, and their ages, e.g.&nbsp;POLYMOD <span class="citation" data-cites="mossong2008social">(<a href="#/references" role="doc-biblioref" onclick="">Mossong et al. 2008</a>)</span>. The <code>socialmixr</code> R package provides many such surveys.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/contact_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Illustrative contact matrix; darker means more contacts per day."><img data-src="images/contact_matrix.png" alt="Illustrative contact matrix; darker means more contacts per day."></a></p>
+<figcaption>Illustrative contact matrix; darker means more contacts per day.</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Mixing is <span style="color:tomato">assortative</span>: most contacts are with people of a <span style="color:blue">similar age</span>, plus a <span style="color:blue">parent–child</span> band.</li>
+<li>Contacts are <span style="color:tomato">reciprocal</span>: <span class="math inline">\(c_{ji} N_i = c_{ij} N_j\)</span>, so the matrix is not free to take any shape.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/contact_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Illustrative contact matrix; darker means more contacts per day."><img data-src="images/contact_matrix.png" alt="Illustrative contact matrix; darker means more contacts per day."></a></p>
+<figcaption>Illustrative contact matrix; darker means more contacts per day.</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -2234,7 +2359,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/stochastic/det_vs_stoch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="images/stochastic/det_vs_stoch.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
+<p><a href="images/stochastic/det_vs_stoch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img data-src="images/stochastic/det_vs_stoch.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
 </figure>
 </div>
 </section>
@@ -2310,7 +2435,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <h2>Event-driven stochastic SIR</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
+<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
 </figure>
 </div>
 <ul>
@@ -2322,7 +2447,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
+<p><a href="images/model_diagrams/model_diagrams.006.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img data-src="images/model_diagrams/model_diagrams.006.jpeg" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
 </figure>
 </div>
 <table class="caption-top">
@@ -2379,7 +2504,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/stochastic/gillespie_schematic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="images/stochastic/gillespie_schematic.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
+<p><a href="images/stochastic/gillespie_schematic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="images/stochastic/gillespie_schematic.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></a></p>
 </figure>
 </div>
 </section>
@@ -2540,7 +2665,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <h2>What skills are needed to build and use infectious disease models?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/modelling_skills.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="A non-exhaustive list of skills needed for modelling infectious diseases."><img data-src="images/modelling_skills.jpeg" alt="A non-exhaustive list of skills needed for modelling infectious diseases."></a></p>
+<p><a href="images/modelling_skills.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-40" title="A non-exhaustive list of skills needed for modelling infectious diseases."><img data-src="images/modelling_skills.jpeg" alt="A non-exhaustive list of skills needed for modelling infectious diseases."></a></p>
 <figcaption>A non-exhaustive list of skills needed for modelling infectious diseases.</figcaption>
 </figure>
 </div>
@@ -2572,7 +2697,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Anderson_and_May.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"><img data-src="images/Anderson_and_May.jpeg" style="width:60.0%" alt="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"></a></p>
+<p><a href="images/Anderson_and_May.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-41" title="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"><img data-src="images/Anderson_and_May.jpeg" style="width:60.0%" alt="Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May"></a></p>
 <figcaption>Infectious Diseases of Humans: Dynamics and Control by Roy M. Anderson and Robert M. May</figcaption>
 </figure>
 </div>
@@ -2580,7 +2705,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/ID_modelling_Vynnycky_and_White.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Infectious Disease Modelling by Emilia Vynnycky and Richard White"><img data-src="images/ID_modelling_Vynnycky_and_White.jpeg" style="width:60.0%" alt="Infectious Disease Modelling by Emilia Vynnycky and Richard White"></a></p>
+<p><a href="images/ID_modelling_Vynnycky_and_White.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-42" title="Infectious Disease Modelling by Emilia Vynnycky and Richard White"><img data-src="images/ID_modelling_Vynnycky_and_White.jpeg" style="width:60.0%" alt="Infectious Disease Modelling by Emilia Vynnycky and Richard White"></a></p>
 <figcaption>Infectious Disease Modelling by Emilia Vynnycky and Richard White</figcaption>
 </figure>
 </div>
@@ -2595,7 +2720,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Rohani_and_Keeling.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"><img data-src="images/Rohani_and_Keeling.jpeg" style="width:60.0%" alt="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"></a></p>
+<p><a href="images/Rohani_and_Keeling.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-43" title="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"><img data-src="images/Rohani_and_Keeling.jpeg" style="width:60.0%" alt="Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani"></a></p>
 <figcaption>Modeling Infectious Diseases in Humans and Animals by Matt Keeling and Pejman Rohani</figcaption>
 </figure>
 </div>
@@ -2603,7 +2728,7 @@ R0 \propto \dfrac{\text{Infection}}{\text{Contact}} \times \dfrac{\text{Contact}
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="images/Epidemics_Ottar.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Epidemics: Models and Data Using R by Ottar N. Bjornstad"><img data-src="images/Epidemics_Ottar.jpg" style="width:60.0%" alt="Epidemics: Models and Data Using R by Ottar N. Bjornstad"></a></p>
+<p><a href="images/Epidemics_Ottar.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-44" title="Epidemics: Models and Data Using R by Ottar N. Bjornstad"><img data-src="images/Epidemics_Ottar.jpg" style="width:60.0%" alt="Epidemics: Models and Data Using R by Ottar N. Bjornstad"></a></p>
 <figcaption>Epidemics: Models and Data Using R by Ottar N. Bjornstad</figcaption>
 </figure>
 </div>
@@ -2697,6 +2822,9 @@ Keeling, Matt J., and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in H
 </div>
 <div id="ref-kermack1927contribution" class="csl-entry" role="listitem">
 Kermack, William Ogilvy, and Anderson G McKendrick. 1927. <span>“A Contribution to the Mathematical Theory of Epidemics.”</span> <em>Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character</em> 115 (772): 700–721.
+</div>
+<div id="ref-mossong2008social" class="csl-entry" role="listitem">
+Mossong, Joël, Niel Hens, Mark Jit, et al. 2008. <span>“Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases.”</span> <em>PLoS Medicine</em> 5 (3): e74. <a href="https://doi.org/10.1371/journal.pmed.0050074">https://doi.org/10.1371/journal.pmed.0050074</a>.
 </div>
 </div>
 
