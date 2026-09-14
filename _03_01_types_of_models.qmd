@@ -122,6 +122,8 @@
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-important icon="false"}
 ### Discussion
 
@@ -433,6 +435,8 @@ $$\frac{dS}{dt} = -\beta S I$$
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-important icon="false"}
 ### Discussion
 
@@ -475,6 +479,8 @@ Consider the case of modeling Ebola transmission in a small community in the DRC
 
 ------------------------------------------------------------------------
 
-::: {.fragment style="font-size: 450%"}
+## {background-color="#447099" transition="fade-in"}
+
+::: {.fragment style="font-size: 450%; color: white;"}
 Any Questions?
 :::

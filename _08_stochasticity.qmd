@@ -21,6 +21,8 @@ Chance matters most when the [number of infectious individuals is small]{style="
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-caution collapse="true" icon="false"}
 ### Discussion
 

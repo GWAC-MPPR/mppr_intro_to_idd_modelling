@@ -74,6 +74,8 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-caution collapse="true" icon="false"}
 ### Discussion
 
@@ -127,6 +129,8 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-caution collapse="true" icon="false"}
 ### Discussion
 
@@ -135,6 +139,8 @@ Note that these classifications are not mutually exclusive. Hence, a disease can
 
 ------------------------------------------------------------------------
 
-::: {.fragment style="font-size: 450%"}
+## {background-color="#447099" transition="fade-in"}
+
+::: {.fragment style="font-size: 450%; color: white;"}
 Any Questions?
 :::

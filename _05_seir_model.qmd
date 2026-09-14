@@ -103,6 +103,8 @@ The model equations now become:
 
 ------------------------------------------------------------------------
 
+## {background-color="#447099" transition="fade-in"}
+
 ::: {.callout-caution collapse="true" icon="false"}
 #### Discussion
 
@@ -145,6 +147,8 @@ https://github.com/GWAC-MPPR/mppr_intro_to_idd_modelling_r_practicals.git
 ```
 ------------------------------------------------------------------------
 
-::: {.fragment style="font-size: 450%"}
+## {background-color="#447099" transition="fade-in"}
+
+::: {.fragment style="font-size: 450%; color: white;"}
 Any Questions?
 :::
